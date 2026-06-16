@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:15:23 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 15:24:22 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,7 +196,7 @@ void				*ft_memmove(void *dest, const void *src,
  * \retval 0 byte not found
 */
 void				*ft_memchr(const void *s, int c, long unsigned int n);
-/** compare memory areas
+/** \brief compare memory areas
  *
  * \param s1	first memory area
  * \param s2	second memory area
@@ -206,5 +206,14 @@ void				*ft_memchr(const void *s, int c, long unsigned int n);
 */
 int					ft_memcmp(const void *s1, const void *s2,
 						long unsigned int n);
+
+/** \brief convert a string to a number
+ *
+ * \warning errors are not detected
+ *
+ * \param nptr string
+ * \return number
+ */
+int					ft_atoi(const char *nptr);
 
 #endif
