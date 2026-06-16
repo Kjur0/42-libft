@@ -6,9 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:35:51 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/15 20:38:22 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:54:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

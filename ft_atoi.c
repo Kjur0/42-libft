@@ -6,11 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:33:52 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:58:21 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern int	ft_isdigit(int c);
+#include "libft.h"
 
 static int	ft_isspace(int c)
 {
@@ -19,9 +19,9 @@ static int	ft_isspace(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	long unsigned int	i;
-	unsigned int		n;
-	signed int			sign;
+	size_t			i;
+	unsigned int	n;
+	signed int		sign;
 
 	i = 0;
 	while (ft_isspace(nptr[i]))

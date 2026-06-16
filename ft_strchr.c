@@ -6,14 +6,16 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:20:41 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:00:24 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:59:30 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	long unsigned int	i;
-	char				wanted;
+	size_t	i;
+	char	wanted;
 
 	i = 0;
 	wanted = c;

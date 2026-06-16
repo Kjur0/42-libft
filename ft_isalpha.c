@@ -6,9 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:24:10 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/15 20:34:20 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:54:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

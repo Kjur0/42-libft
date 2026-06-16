@@ -6,14 +6,16 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:15:44 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:20:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:56:31 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *big, const char *little, long unsigned int len)
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	long unsigned int	i;
-	long unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < len && big[i])

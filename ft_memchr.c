@@ -6,15 +6,17 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 14:45:24 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:09:33 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:55:04 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, long unsigned int n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*ptr = s;
 	unsigned char		byte;
-	long unsigned int	i;
+	size_t				i;
 
 	byte = c;
 	i = 0;

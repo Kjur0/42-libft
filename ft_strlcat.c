@@ -6,15 +6,16 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:58:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:22:58 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:56:10 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlcat(char *dst, const char *src,
-	long unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	long unsigned int	i;
-	long unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < size - 1 && dst[i])

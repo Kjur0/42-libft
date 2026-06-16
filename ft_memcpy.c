@@ -6,13 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:51:03 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:55:26 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, long unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	long unsigned int	i;
+	size_t				i;
 	unsigned char		*dest_writeable;
 	const unsigned char	*src_readable = src;
 

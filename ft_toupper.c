@@ -6,9 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:09:23 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 13:10:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:56:41 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

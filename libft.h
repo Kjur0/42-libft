@@ -6,12 +6,14 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 17:48:03 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 18:01:42 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <stddef.h>
 
 /** \brief checks for an alphabetic character
  *
@@ -19,14 +21,14 @@
  * \retval 0 `false`
  * \retval 1 `true`
  */
-int					ft_isalpha(int c);
+int		ft_isalpha(int c);
 /** \brief checks for a digit
  *
  * \param c character to check
  * \retval 0 `false`
  * \retval 1 `true`
  */
-int					ft_isdigit(int c);
+int		ft_isdigit(int c);
 /** \brief checks for an alphanumeric character
  *
  * equivilent to:
@@ -38,7 +40,7 @@ int					ft_isdigit(int c);
  * \retval 0 `false`
  * \retval 1 `true`
  */
-int					ft_isalnum(int c);
+int		ft_isalnum(int c);
 /** \brief checks is the character in ASCII range
  *
  * checks if value is between `0` and `127` (7-bit unsigned integer)
@@ -47,27 +49,27 @@ int					ft_isalnum(int c);
  * \retval 0 `false`
  * \retval 1 `true`
  */
-int					ft_isascii(int c);
+int		ft_isascii(int c);
 /** \brief checks is the character printable (non-control)
  *
  * \param c character to check
  * \retval 0 `false`
  * \retval 1 `true`
  */
-int					ft_isprint(int c);
+int		ft_isprint(int c);
 
 /** \brief convert character to uppercase
  *
  * \param c lowercase character
  * \return uppercase character
  */
-int					ft_toupper(int c);
+int		ft_toupper(int c);
 /** \brief convert character to lowercase
  *
  * \param c uppercase character
  * \return lowercase character
  */
-int					ft_tolower(int c);
+int		ft_tolower(int c);
 
 /** \brief calculate string length
  *
@@ -76,7 +78,7 @@ int					ft_tolower(int c);
  * \param s string being array of `char`
  * \return lenght of a string
  */
-long unsigned int	ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 /** \brief safely copy a string
  *
  * copy up to specified amount of characters from `NUL`-terminated string
@@ -87,8 +89,7 @@ long unsigned int	ft_strlen(const char *s);
  * \param size	max size of the result
  * \return total lenght of result string
  */
-long unsigned int	ft_strlcpy(char *dst, const char *src,
-						long unsigned int size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** \brief safely concatenate two strings
  *
  * concatenate two string to a string of specified lenght
@@ -99,8 +100,7 @@ long unsigned int	ft_strlcpy(char *dst, const char *src,
  * \param size	max size of the result
  * \return total lenght of result string
  */
-long unsigned int	ft_strlcat(char *dst, const char *src,
-						long unsigned int size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /** \brief locate character in a string
  *
  * first occurrence
@@ -112,7 +112,7 @@ long unsigned int	ft_strlcat(char *dst, const char *src,
  * \return pointer to first occurrence
  * \retval 0 character not found
 */
-char				*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 /** \brief locate character in a string (reverse)
  *
  * last occurrence
@@ -124,7 +124,7 @@ char				*ft_strchr(const char *s, int c);
  * \return pointer to last occurrence
  * \retval 0 character not found
  */
-char				*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 /** \brief compare two strings
  *
  * compares only first non-matching character.
@@ -136,8 +136,7 @@ char				*ft_strrchr(const char *s, int c);
  * \return difference between first unmatched chars
  * \retval 0 no difference
  */
-int					ft_strncmp(const char *s1, const char *s2,
-						long unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 /** \brief locate a substring in a string
  *
  * \param big		string to search in
@@ -146,14 +145,13 @@ int					ft_strncmp(const char *s1, const char *s2,
  * \return pointer to substring
  * \retval 0 substring not located
  */
-char				*ft_strnstr(const char *big, const char *little,
-						long unsigned int len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 /** \brief duplicate a string
  *
  * \param s string to duplicate
  * \return duplicated string
  */
-char				*ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
 
 /** \brief fill memory area with constant byte
  *
@@ -162,13 +160,13 @@ char				*ft_strdup(const char *s);
  * \param n number of bytes to fill
  * \return pointer to filled memory (`s`)
  */
-void				*ft_memset(void *s, int c, long unsigned int n);
+void	*ft_memset(void *s, int c, size_t n);
 /** \brief fill memory area with zero
  *
  * \param s pointer to memory area
  * \param n number of bytes to zero
  */
-void				ft_bzero(void *s, long unsigned int n);
+void	ft_bzero(void *s, size_t n);
 /** \brief copy memory area
  *
  * \warning `src` and `dest` must not overlap
@@ -178,8 +176,7 @@ void				ft_bzero(void *s, long unsigned int n);
  * \param n		number of bytes to copy (lenght)
  * \return pointer to destination
  */
-void				*ft_memcpy(void *dest, const void *src,
-						long unsigned int n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 /** \brief move memory area
  *
  * \warning `src` and `dest` may overlap, but `src` might be overridden
@@ -189,8 +186,7 @@ void				*ft_memcpy(void *dest, const void *src,
  * \param n		number of bytes to move (lenght)
  * \return pointer to destination
  */
-void				*ft_memmove(void *dest, const void *src,
-						long unsigned int n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 /** \brief scan memory for a byte
  *
  * first occurrence
@@ -201,7 +197,7 @@ void				*ft_memmove(void *dest, const void *src,
  * \return pointer to first occurrence
  * \retval 0 byte not found
 */
-void				*ft_memchr(const void *s, int c, long unsigned int n);
+void	*ft_memchr(const void *s, int c, size_t n);
 /** \brief compare memory areas
  *
  * \param s1	first memory area
@@ -210,19 +206,15 @@ void				*ft_memchr(const void *s, int c, long unsigned int n);
  * \return difference between first unmatched bytes
  * \retval 0 no difference
 */
-int					ft_memcmp(const void *s1, const void *s2,
-						long unsigned int n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 /** \brief allocate dynamic memory for an array
- *
- *
  *
  * \param nmemb	number of members
  * \param size	size of a member
  * \return pointer to dynamic memory
  * \retval 0 allocation failed
  */
-void				*ft_calloc(long unsigned int nmemb, long unsigned int size);
-
+void	*ft_calloc(size_t nmemb, size_t size);
 
 /** \brief convert a string to a number
  *
@@ -231,6 +223,6 @@ void				*ft_calloc(long unsigned int nmemb, long unsigned int size);
  * \param nptr string
  * \return number
  */
-int					ft_atoi(const char *nptr);
+int		ft_atoi(const char *nptr);
 
 #endif
