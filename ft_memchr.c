@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 12:13:36 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:49:55 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/06/16 14:45:24 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/06/16 15:09:33 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, long unsigned int n)
+void	*ft_memchr(const void *s, int c, long unsigned int n)
 {
+	const unsigned char	*ptr = s;
+	unsigned char		byte;
 	long unsigned int	i;
-	unsigned char		*dest_writeable;
-	const unsigned char	*src_readable = src;
 
-	dest_writeable = dest;
-	if (n == 0 || dest_writeable == src_readable)
-		return (dest_writeable);
-	if (src_readable < dest_writeable)
-	{
-		while (n > 0)
-		{
-			dest_writeable[n - 1] = src_readable[n - 1];
-			n--;
-		}
-		return (dest_writeable);
-	}
+	byte = c;
 	i = 0;
 	while (i < n)
 	{
-		dest_writeable[i] = src_readable[i];
+		if (ptr[i] == byte)
+			return ((unsigned char *)ptr + i);
 		i++;
 	}
-	return (dest_writeable);
+	return (0);
 }

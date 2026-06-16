@@ -6,16 +6,18 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:20:41 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:23:05 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 15:00:24 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	long unsigned int		i;
+	long unsigned int	i;
+	char				wanted;
 
 	i = 0;
-	while (s[i] != c)
+	wanted = c;
+	while (s[i] != wanted)
 	{
 		if (!s[i])
 			return (0);

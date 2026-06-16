@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 13:24:49 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:53:17 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/06/16 15:01:31 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/06/16 15:06:04 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, long unsigned int n)
 {
+	const unsigned char	*mem1 = s1;
+	const unsigned char	*mem2 = s2;
 	long unsigned int	i;
-	unsigned char		value;
 
-	i = 1;
-	value = c;
-	while (s[i - 1])
+	i = 0;
+	while (i < n - 1 && mem1[i] == mem2[i])
 		i++;
-	while (i > 0)
-	{
-		if (s[i - 1] == value)
-			return ((char *)s + i - 1);
-		i--;
-	}
-	return (0);
+	return (mem1[i] - mem2[i]);
 }

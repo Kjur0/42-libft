@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:25:15 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 15:03:51 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,20 +105,24 @@ long unsigned int	ft_strlcat(char *dst, const char *src,
  *
  * first occurrence
  *
+ * \warning multibyte chars are unsupported
+ *
  * \param s string
  * \param c char to locate
  * \return pointer to first occurrence
- * \retval 0 returned if character wasn't found
+ * \retval 0 character not found
 */
 char				*ft_strchr(const char *s, int c);
 /** \brief locate character in a string (reverse)
  *
  * last occurrence
  *
+ * \warning multibyte chars are unsupported
+ *
  * \param s string
  * \param c char to locate
  * \return pointer to last occurrence
- * \retval 0 returned if character wasn't found
+ * \retval 0 character not found
  */
 char				*ft_strrchr(const char *s, int c);
 /** \brief compare two strings
@@ -170,6 +174,27 @@ void				*ft_memcpy(void *dest, const void *src,
  * \return pointer to destination
  */
 void				*ft_memmove(void *dest, const void *src,
+						long unsigned int n);
+/** \brief scan memory for a byte
+ *
+ * first occurrence
+ *
+ * \param s pointer to memory area
+ * \param c byte to search for
+ * \param n size of memory area
+ * \return pointer to first occurrence
+ * \retval 0 byte not found
+*/
+void				*ft_memchr(const void *s, int c, long unsigned int n);
+/** compare memory areas
+ *
+ * \param s1	first memory area
+ * \param s2	second memory area
+ * \param n		size to compare
+ * \return difference between first unmatched bytes
+ * \retval 0 no difference
+*/
+int					ft_memcmp(const void *s1, const void *s2,
 						long unsigned int n);
 
 #endif
