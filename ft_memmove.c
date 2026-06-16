@@ -6,15 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:13:36 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 13:50:30 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 14:23:24 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dest, const void *src, long unsigned int n)
 {
-	unsigned int	i;
-	char			*dest_writeable;
-	const char		*src_readable = src;
+	long unsigned int	i;
+	char				*dest_writeable;
+	const char			*src_readable = src;
 
 	dest_writeable = dest;
 	if (n == 0 || dest_writeable == src_readable)

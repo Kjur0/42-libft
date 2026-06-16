@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:23:35 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/06/16 14:21:22 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/06/16 14:29:29 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, long unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, long unsigned int n)
 {
 	long unsigned int	i;
-	char				*dest_writeable;
-	const char			*src_readable = src;
 
 	i = 0;
-	dest_writeable = dest;
-	while (i < n)
-	{
-		dest_writeable[i] = src_readable[i];
+	while (s1[i] && s1[i] == s2[i] && i < n)
 		i++;
-	}
-	return (dest_writeable);
+	return (s1[i] - s2[i]);
 }

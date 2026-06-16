@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 14:23:35 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/06/16 13:24:49 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/06/16 14:26:06 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, long unsigned int n)
+char	*ft_strrchr(const char *s, int c)
 {
 	long unsigned int	i;
-	char				*dest_writeable;
-	const char			*src_readable = src;
 
-	i = 0;
-	dest_writeable = dest;
-	while (i < n)
-	{
-		dest_writeable[i] = src_readable[i];
+	i = 1;
+	while (s[i - 1])
 		i++;
+	while (i > 0)
+	{
+		if (s[i - 1] == c)
+			return ((char *)s + i - 1);
+		i--;
 	}
-	return (dest_writeable);
+	return (0);
 }

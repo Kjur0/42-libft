@@ -6,13 +6,14 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:55:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 12:56:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 14:22:45 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+long unsigned int	ft_strlcpy(char *dst, const char *src,
+	long unsigned int size)
 {
-	unsigned int	i;
+	long unsigned int	i;
 
 	i = 0;
 	while (i < size - 1 && src[i])
