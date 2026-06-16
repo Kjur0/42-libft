@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/16 14:08:07 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/16 14:12:13 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,14 @@ SRCS		=	ft_isalpha.c \
 				ft_isdigit.c \
 				ft_isalnum.c \
 				ft_isascii.c \
-				ft_isprint.c
+				ft_isprint.c \
+				ft_strlen.c \
+				ft_memset.c \
+				ft_bzero.c \
+				ft_memcpy.c \
+				ft_memmove.c \
+				ft_strlcpy.c \
+				ft_strlcat.c
 
 OBJS		=	$(SRCS:%.c=%.o)
 
