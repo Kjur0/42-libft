@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:24:22 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 17:48:03 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,12 @@ int					ft_strncmp(const char *s1, const char *s2,
  */
 char				*ft_strnstr(const char *big, const char *little,
 						long unsigned int len);
+/** \brief duplicate a string
+ *
+ * \param s string to duplicate
+ * \return duplicated string
+ */
+char				*ft_strdup(const char *s);
 
 /** \brief fill memory area with constant byte
  *
@@ -206,6 +212,17 @@ void				*ft_memchr(const void *s, int c, long unsigned int n);
 */
 int					ft_memcmp(const void *s1, const void *s2,
 						long unsigned int n);
+/** \brief allocate dynamic memory for an array
+ *
+ *
+ *
+ * \param nmemb	number of members
+ * \param size	size of a member
+ * \return pointer to dynamic memory
+ * \retval 0 allocation failed
+ */
+void				*ft_calloc(long unsigned int nmemb, long unsigned int size);
+
 
 /** \brief convert a string to a number
  *
