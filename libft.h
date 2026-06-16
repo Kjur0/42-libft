@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 15:03:51 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/16 15:15:23 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,16 @@ char				*ft_strrchr(const char *s, int c);
  */
 int					ft_strncmp(const char *s1, const char *s2,
 						long unsigned int n);
+/** \brief locate a substring in a string
+ *
+ * \param big		string to search in
+ * \param little	string to search for
+ * \param len		max lenght for searching
+ * \return pointer to substring
+ * \retval 0 substring not located
+ */
+char				*ft_strnstr(const char *big, const char *little,
+						long unsigned int len);
 
 /** \brief fill memory area with constant byte
  *
