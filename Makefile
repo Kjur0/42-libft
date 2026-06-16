@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/16 14:06:10 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/16 14:08:07 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,11 @@ ARFLAGS		=	rcs
 
 NAME		=	libft.a
 
-SRCS		=	
+SRCS		=	ft_isalpha.c \
+				ft_isdigit.c \
+				ft_isalnum.c \
+				ft_isascii.c \
+				ft_isprint.c
 
 OBJS		=	$(SRCS:%.c=%.o)
 
