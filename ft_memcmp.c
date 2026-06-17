@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:01:31 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:31:01 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 15:04:38 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t				i;
 
 	i = 0;
-	while (i < n - 1 && mem1[i] == mem2[i])
+	while (i + 1 < n && mem1[i] == mem2[i])
 		i++;
 	return (mem1[i] - mem2[i]);
 }
