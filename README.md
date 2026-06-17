@@ -16,7 +16,7 @@ To compile `libft` just use `make`
 
 > `all` : compile and link everything (default)  
 > `libft.a` : link `libft`  
-> `%.o` : compile a spefied function (instead of `%`)  
+> `<function>` : compile a spefied function  
 > `clean` : clean objects (remove `*.o` files)  
 > `fclean` : full clean (remove everything compiled)  
 > `re` : recompile and relink everything

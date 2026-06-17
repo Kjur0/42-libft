@@ -6,12 +6,21 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 17:55:26 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:30:38 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** \brief copy memory area
+ *
+ * \warning `src` and `dest` must not overlap
+ *
+ * \param dest	pointer to destination
+ * \param src	pointer to source
+ * \param n		number of bytes to copy (length)
+ * \return pointer to destination
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;

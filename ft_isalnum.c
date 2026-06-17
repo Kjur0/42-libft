@@ -6,12 +6,23 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:28:21 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 17:54:41 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:27:59 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** \brief checks for an alphanumeric character
+ *
+ * equivilent to:
+ * ```c
+ * ft_isalpha(c) || ft_isdigit(c)
+ * ```
+ *
+ * \param c character to check
+ * \retval 0 `false`
+ * \retval 1 `true`
+ */
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));

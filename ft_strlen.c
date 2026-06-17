@@ -6,12 +6,19 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:39:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 17:56:21 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:28:51 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** \brief calculate string length
+ *
+ * count characters up to first `NUL`-terminator (`'\0'`)
+ *
+ * \param s string being array of `char`
+ * \return length of a string
+ */
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;

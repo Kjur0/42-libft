@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 18:01:42 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:28:21 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int		ft_tolower(int c);
  * count characters up to first `NUL`-terminator (`'\0'`)
  *
  * \param s string being array of `char`
- * \return lenght of a string
+ * \return length of a string
  */
 size_t	ft_strlen(const char *s);
 /** \brief safely copy a string
@@ -87,18 +87,18 @@ size_t	ft_strlen(const char *s);
  * \param dst	pointer to destination
  * \param src	pointer to source
  * \param size	max size of the result
- * \return total lenght of result string
+ * \return total length of result string
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** \brief safely concatenate two strings
  *
- * concatenate two string to a string of specified lenght
+ * concatenate two string to a string of specified length
  * ensuring the result is `NUL`-terminated and doesn't exceed size limit
  *
  * \param dst	pointer to destination
  * \param src	pointer to source
  * \param size	max size of the result
- * \return total lenght of result string
+ * \return total length of result string
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /** \brief locate character in a string
@@ -132,7 +132,7 @@ char	*ft_strrchr(const char *s, int c);
  *
  * \param s1	first string
  * \param s2	second string
- * \param n		max lenght for comparison
+ * \param n		max length for comparison
  * \return difference between first unmatched chars
  * \retval 0 no difference
  */
@@ -141,7 +141,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  *
  * \param big		string to search in
  * \param little	string to search for
- * \param len		max lenght for searching
+ * \param len		max length for searching
  * \return pointer to substring
  * \retval 0 substring not located
  */
@@ -173,7 +173,7 @@ void	ft_bzero(void *s, size_t n);
  *
  * \param dest	pointer to destination
  * \param src	pointer to source
- * \param n		number of bytes to copy (lenght)
+ * \param n		number of bytes to copy (length)
  * \return pointer to destination
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -183,7 +183,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  *
  * \param dest	pointer to destination
  * \param src	pointer to source
- * \param n		number of bytes to move (lenght)
+ * \param n		number of bytes to move (length)
  * \return pointer to destination
  */
 void	*ft_memmove(void *dest, const void *src, size_t n);
@@ -224,5 +224,15 @@ void	*ft_calloc(size_t nmemb, size_t size);
  * \return number
  */
 int		ft_atoi(const char *nptr);
+
+/** \brief create a substring from a string
+ *
+ * \param s		original string
+ * \param start	starting index of the substring
+ * \param len	max length of a the substring
+ * \return created substring
+ * \retval 0 creation failed
+ */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

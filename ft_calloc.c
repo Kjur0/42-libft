@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:35:05 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/16 18:00:40 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:31:08 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 #include <stdlib.h>
 
+/** \brief allocate dynamic memory for an array
+ *
+ * \param nmemb	number of members
+ * \param size	size of a member
+ * \return pointer to dynamic memory
+ * \retval 0 allocation failed
+ */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*ptr;
