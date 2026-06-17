@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 11:36:08 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/17 11:49:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ int	ft_atoi(const char *nptr)
 	}
 	n = 0;
 	while (ft_isdigit(nptr[i]))
-		n = 10 * n - (nptr[i++] - '0');
+		n = 10 * n + (nptr[i++] - '0');
 	return (sign * n);
 }
