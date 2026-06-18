@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:42:32 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 21:22:02 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -273,5 +273,53 @@ char	*ft_strtrim(char const *s1, char const *set);
  * \retval 0 spliting failed
 */
 char	**ft_split(char const *s, char c);
+/**
+ * \brief converts number to string
+ *
+ * \param n number to be converted
+ * \return string representing the number
+ * \retval 0 convertion failed
+ */
+char	*ft_itoa(int n);
+/** \brief map a string
+ *
+ * \param s string to map
+ * \param f function used for mapping
+ * \return new string
+ * \retval 0 mapping failed
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/** \brief interate over a string
+ *
+ * \param s string to iterate over
+ * \param f function
+ */
+void	ft_striteri(char const *s, void (*f)(unsigned int, char));
+
+//## writing
+/** \brief write a character
+ *
+ * \param c		character to write
+ * \param fd	file descriptor for writing
+ */
+void	ft_putchar_fd(char c, int fd);
+/** \brief write a string
+ *
+ * \param s		string to write
+ * \param fd	file descriptor for writing
+ */
+void	ft_putstr_fd(char *s, int fd);
+/** \brief write a string ending with new line
+ *
+ * \param s		string to write
+ * \param fd	file descriptor for writing
+ */
+void	ft_putendl_fd(char *s, int fd);
+/** \brief write a number
+ *
+ * \param n		number to write
+ * \param fd	file descriptor for writing
+ */
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
