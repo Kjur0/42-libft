@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:58:52 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 22:08:36 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,12 @@ char	*ft_itoa(int n)
 	if (!out)
 		return (0);
 	out[len--] = 0;
-	while (len - sign > 0)
+	while (len - sign + 1 > 0)
 	{
-		out[len--] = '0' + n % 10;
+		if (n > 0)
+			out[len--] = '0' + n % 10;
+		else
+			out[len--] = '0' - n % 10;
 		n /= 10;
 	}
 	if (sign)
