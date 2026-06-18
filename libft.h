@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:19:34 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:24:16 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  *
  * \param s string to duplicate
  * \return duplicated string
+ * \retval 0 duplication failed
  */
 char	*ft_strdup(const char *s);
 
@@ -238,5 +239,13 @@ int		ft_atoi(const char *nptr);
  * \retval 0 creation failed
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+/** \brief join two strings into a new one
+ *
+ * \param s1	first string
+ * \param s2	second string
+ * \return new string
+ * \retval 0 creation failed
+ */
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/06/18 19:28:46 by kjurkows         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+#include <stdlib.h>
+
+/** \brief join two strings into a new one
+ *
+ * \param s1	first string
+ * \param s2	second string
+ * \return new string
+ * \retval 0 creation failed
+ */
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	const size_t	len1 = ft_strlen(s1);
+	const size_t	len2 = ft_strlen(s2);
+	char			*str;
+	size_t			i;
+	size_t			j;
+
+	str = malloc(len1 + len2 + 1);
+	if (!str)
+		return (str);
+	i = 0;
+	while (i < len1)
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (j < len2)
+		str[i++] = s2[j++];
+	str[i] = 0;
+	return (str);
+}
