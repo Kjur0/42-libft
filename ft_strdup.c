@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 17:47:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:30:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:24:31 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	str = malloc(sizeof(char) * len);
+	if (!str)
+		return (0);
 	while (i < len)
 	{
 		str[i] = s[i];
