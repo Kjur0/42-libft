@@ -6,11 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:26:59 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:37:04 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 //# Part 1
 //## char checks
 
