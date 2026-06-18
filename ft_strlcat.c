@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:58:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:29:10 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 16:13:19 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,20 @@
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	const size_t	src_len = ft_strlen(src);
+	const size_t	dst_len = ft_strlen(dst);
+	size_t			append;
+	size_t			i;
 
+	if (size < dst_len + 1)
+		return (src_len + size);
+	append = size - dst_len - 1;
 	i = 0;
-	while (i < size - 1 && dst[i])
-		i++;
-	j = 0;
-	while (i < size - 1 && src[j])
+	while (i < append && src[i] != '\0')
 	{
-		dst[i] = src[j];
+		dst[dst_len + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[i] = 0;
-	return (i);
+	dst[dst_len + i] = '\0';
+	return (src_len + dst_len);
 }
