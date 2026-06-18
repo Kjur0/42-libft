@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:10:30 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:28:41 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:12:04 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,14 @@
  */
 int	ft_tolower(int c)
 {
+	unsigned char	ch;
+
+	if (c == -1)
+		return (c);
 	if (c >= 'A' && c <= 'Z')
 		return (c - 'A' + 'a');
-	return (c);
+	ch = c;
+	if (c > ch)
+		return (c);
+	return (ch);
 }
