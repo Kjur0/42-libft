@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:20:41 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:29:37 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:35:24 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string manipulation
 
 /** \brief locate character in a string
  *

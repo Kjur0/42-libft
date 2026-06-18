@@ -6,12 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:28:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 20:43:17 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 2
+//## string creation
 
+//import `malloc`
 #include <stdlib.h>
 
 /** \brief join two strings into a new one
@@ -19,7 +22,7 @@
  * \param s1	first string
  * \param s2	second string
  * \return new string
- * \retval 0 creation failed
+ * \retval 0 joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {

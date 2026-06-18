@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:24:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 20:42:32 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stddef.h>
 
+//# Part 1
+
+//## char checks
 /** \brief checks for an alphabetic character
  *
  * \param c character to check
@@ -58,6 +61,7 @@ int		ft_isascii(int c);
  */
 int		ft_isprint(int c);
 
+//## char convertion
 /** \brief convert character to uppercase
  *
  * \warning inputs are treated as `unsigned char` (except for `-1`)
@@ -75,6 +79,7 @@ int		ft_toupper(int c);
  */
 int		ft_tolower(int c);
 
+//## string manipulation
 /** \brief calculate string length
  *
  * count characters up to first `NUL`-terminator (`'\0'`)
@@ -158,6 +163,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  */
 char	*ft_strdup(const char *s);
 
+//## memory manipulation
 /** \brief fill memory area with constant byte
  *
  * \param s pointer to memory area
@@ -221,6 +227,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  */
 void	*ft_calloc(size_t nmemb, size_t size);
 
+//## string convertion
 /** \brief convert a string to a number
  *
  * \warning errors are not detected
@@ -230,6 +237,9 @@ void	*ft_calloc(size_t nmemb, size_t size);
  */
 int		ft_atoi(const char *nptr);
 
+//# Part 2
+
+//## string creation
 /** \brief create a substring from a string
  *
  * \param s		original string
@@ -244,8 +254,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * \param s1	first string
  * \param s2	second string
  * \return new string
- * \retval 0 creation failed
+ * \retval 0 joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2);
+/** \brief trim a string
+ *
+ * \param s1	string to trim
+ * \param set	set of characters to be removed
+ * \return new trimmed string
+ * \retval 0 trimming failed
+*/
+char	*ft_strtrim(char const *s1, char const *set);
+/** \brief split a string
+ *
+ * \param s	string to split
+ * \param c	delimiter
+ * \return `NUL`-terminated array of strings
+ * \retval 0 spliting failed
+*/
+char	**ft_split(char const *s, char c);
 
 #endif

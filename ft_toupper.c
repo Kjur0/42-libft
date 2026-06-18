@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:09:23 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:19:41 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:43 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## char manipulation
 
 /** \brief convert character to uppercase
  *

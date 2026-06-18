@@ -6,12 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:35:05 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:31:08 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## memory manipulation
 
+//import `malloc`
 #include <stdlib.h>
 
 /** \brief allocate dynamic memory for an array

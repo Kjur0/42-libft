@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 14:09:17 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:34:37 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string convertion
 
 /** \brief checks for whitespace character
  *

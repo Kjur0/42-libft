@@ -6,12 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 17:47:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:24:31 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:00 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string manipulation
 
+// import `malloc`
 #include <stdlib.h>
 
 /** \brief duplicate a string

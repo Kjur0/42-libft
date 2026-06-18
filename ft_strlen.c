@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:39:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:28:51 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:28 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string manipulation
 
 /** \brief calculate string length
  *

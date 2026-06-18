@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:01:31 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 15:04:38 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:35:15 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## memory manipulation
 
 /** \brief compare memory areas
  *

@@ -6,12 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:19:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:32:14 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:37:44 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 2
+//## string creation
 
+//import `malloc`
 #include <stdlib.h>
 
 /** \brief create a substring from a string

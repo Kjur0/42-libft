@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:58:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:18:04 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:23 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string manipulation
 
 /** \brief safely concatenate two strings
  *

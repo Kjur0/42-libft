@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:15:44 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:30:08 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:36:32 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## string manipulation
 
 /** \brief locate a substring in a string
  *

@@ -6,11 +6,13 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:35:51 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:28:25 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:37:06 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//# Part 1
+//## char checks
 
 /** \brief checks is the character printable (non-control)
  *
