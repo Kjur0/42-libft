@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:55:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 16:50:28 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:18:11 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * \param dst	pointer to destination
  * \param src	pointer to source
  * \param size	max size of the result
- * \return total length of result string
+ * \return `ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

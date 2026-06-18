@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/17 10:28:21 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:19:34 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,15 @@ int		ft_isprint(int c);
 
 /** \brief convert character to uppercase
  *
+ * \warning inputs are treated as `unsigned char` (except for `-1`)
+ *
  * \param c lowercase character
  * \return uppercase character
  */
 int		ft_toupper(int c);
 /** \brief convert character to lowercase
+ *
+ * \warning inputs are treated as `unsigned char` (except for `-1`)
  *
  * \param c uppercase character
  * \return lowercase character
@@ -87,7 +91,7 @@ size_t	ft_strlen(const char *s);
  * \param dst	pointer to destination
  * \param src	pointer to source
  * \param size	max size of the result
- * \return total length of result string
+ * \return `ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** \brief safely concatenate two strings
@@ -98,7 +102,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * \param dst	pointer to destination
  * \param src	pointer to source
  * \param size	max size of the result
- * \return total length of result string
+ * \return `ft_strlen(src)`
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /** \brief locate character in a string

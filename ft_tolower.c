@@ -6,13 +6,15 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:10:30 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 19:12:04 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:19:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** \brief convert character to lowercase
+ *
+ * \warning inputs are treated as `unsigned char` (except for `-1`)
  *
  * \param c uppercase character
  * \return lowercase character
