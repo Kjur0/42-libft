@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:06:35 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 21:10:07 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 //import `malloc`
 #include <stdlib.h>
 
-/** \brief map a string
+/** @brief map a string
  *
- * \param s string to map
- * \param f function used for mapping
- * \return new string
- * \retval 0 mapping failed
+ * @param s string to map
+ * @param f function used for mapping
+ * @return new string
+ * @retval 0 mapping failed
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:11:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 21:13:11 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:35:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 //# Part 2
 //## string creation
 
-/** \brief interate over a string
+/** @brief interate over a string
  *
- * \param s string to iterate over
- * \param f function
+ * @param s string to iterate over
+ * @param f function
  */
 void	ft_striteri(char const *s, void (*f)(unsigned int, char))
 {

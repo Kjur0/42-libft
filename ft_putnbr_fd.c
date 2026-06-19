@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:22:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 21:25:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:35:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 //import `write`
 #include <unistd.h>
 
-/** \brief write a number
+/** @brief write a number
  *
- * \param n		number to write
- * \param fd	file descriptor for writing
+ * @param n		number to write
+ * @param fd	file descriptor for writing
  */
 void	ft_putnbr_fd(int n, int fd)
 {

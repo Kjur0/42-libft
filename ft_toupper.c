@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:09:23 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:41:34 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 //# Part 1
 //## char manipulation
 
-/** \brief convert character to uppercase
+/** @brief convert character to uppercase
  *
- * \warning inputs are treated as `unsigned char` (except for `-1`)
+ * @note inputs are treated as `unsigned char` (except for `-1`)
  *
- * \param c lowercase character
- * \return uppercase character
+ * @param c lowercase character
+ * @return uppercase character
  */
 int	ft_toupper(int c)
 {

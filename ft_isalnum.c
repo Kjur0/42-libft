@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:28:21 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 //# Part 1
 //## char checks
 
-/** \brief checks for an alphanumeric character
+/** @brief checks for an alphanumeric character
  *
  * equivilent to:
  * ```c
  * ft_isalpha(c) || ft_isdigit(c)
  * ```
  *
- * \param c character to check
- * \retval 0 `false`
- * \retval 1 `true`
+ * @param c character to check
+ * @retval 0 `false`
+ * @retval 1 `true`
  */
 int	ft_isalnum(int c)
 {

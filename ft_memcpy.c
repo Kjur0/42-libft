@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:41:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 //# Part 1
 //## memory manipulation
 
-/** \brief copy memory area
+/** @brief copy memory area
  *
- * \warning `src` and `dest` must not overlap
+ * @warning `src` and `dest` must not overlap
  *
- * \param dest	pointer to destination
- * \param src	pointer to source
- * \param n		number of bytes to copy (length)
- * \return pointer to destination
+ * @param dest	pointer to destination
+ * @param src	pointer to source
+ * @param n		number of bytes to copy (length)
+ * @return pointer to destination
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

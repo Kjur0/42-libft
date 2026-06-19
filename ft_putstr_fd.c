@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:17:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 21:18:12 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:35:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 //import `write`
 #include <unistd.h>
 
-/** \brief write a string
+/** @brief write a string
  *
- * \param s		string to write
- * \param fd	file descriptor for writing
+ * @param s		string to write
+ * @param fd	file descriptor for writing
  */
 void	ft_putstr_fd(char *s, int fd)
 {

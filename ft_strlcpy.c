@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:55:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:27 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 //# Part 1
 //## string manipulation
 
-/** \brief safely copy a string
+/** @brief safely copy a string
  *
  * copy up to specified amount of characters from `NUL`-terminated string
  * ensuring the result is `NUL`-terminated and doesn't exceed size limit
  *
- * \param dst	pointer to destination
- * \param src	pointer to source
- * \param size	max size of the result
- * \return `ft_strlen(src) + min(size, ft_strlen(dst))`
+ * @param dst	pointer to destination
+ * @param src	pointer to source
+ * @param size	max size of the result
+ * @return `ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

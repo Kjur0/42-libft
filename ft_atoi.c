@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:42:01 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 //# Part 1
 //## string convertion
 
-/** \brief checks for whitespace character
+/** @brief checks for whitespace character
  *
  * These are ` `, `\f`, `\n`, `\r`, `\t` and `\v`
  *
- * \param c character to check
- * \retval 0 `false`
- * \retval 1 `true`
+ * @param c character to check
+ * @retval 0 `false`
+ * @retval 1 `true`
  */
 static int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
-/** \brief convert a string to a number
+/** @brief convert a string to a number
  *
- * \warning errors are not detected
+ * @warning errors are not detected
  *
- * \param nptr string
- * \return number
+ * @param nptr string
+ * @return number
  */
 int	ft_atoi(const char *nptr)
 {

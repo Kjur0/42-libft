@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:20:41 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:42:42 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 //# Part 1
 //## string manipulation
 
-/** \brief locate character in a string
+/** @brief locate character in a string
  *
  * first occurrence
  *
- * \warning multibyte chars are unsupported
+ * @note inputs are treated as `unsigned char`
  *
- * \param s string
- * \param c char to locate
- * \return pointer to first occurrence
- * \retval 0 character not found
+ * @param s string
+ * @param c char to locate
+ * @return pointer to first occurrence
+ * @retval 0 character not found
 */
 char	*ft_strchr(const char *s, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 //import `malloc`, `free`
 #include <stdlib.h>
 
-/** \brief free array of strings
+/** @brief free array of strings
  *
- * \param arr	array to be destroyed
- * \param len	lenght of array
- * \return `nullptr`
+ * @param arr	array to be destroyed
+ * @param len	lenght of array
+ * @return `nullptr`
  */
 static char	**free_arr(char **arr, size_t len)
 {
@@ -34,11 +34,11 @@ static char	**free_arr(char **arr, size_t len)
 	return (0);
 }
 
-/** \brief counts words in a string (delimited)
+/** @brief counts words in a string (delimited)
  *
- * \param str string
- * \param c delimiter
- * \return number of words
+ * @param str string
+ * @param c delimiter
+ * @return number of words
  */
 static int	count_words(const char *str, char c)
 {
@@ -60,12 +60,12 @@ static int	count_words(const char *str, char c)
 	return (count);
 }
 
-/** \brief duplicate the first word
+/** @brief duplicate the first word
  *
- * \param str	string
- * \param c		delimiter
- * \return word
- * \retval 0 action failed
+ * @param str	string
+ * @param c		delimiter
+ * @return word
+ * @retval 0 action failed
  */
 static char	*word_dup(const char *str, char c)
 {
@@ -89,12 +89,12 @@ static char	*word_dup(const char *str, char c)
 	return (dup);
 }
 
-/** \brief split a string
+/** @brief split a string
  *
- * \param s	string to split
- * \param c	delimiter
- * \return `NUL`-terminated array of strings
- * \retval 0 spliting failed
+ * @param s	string to split
+ * @param c	delimiter
+ * @return `NUL`-terminated array of strings
+ * @retval 0 spliting failed
 */
 char	**ft_split(char const *s, char c)
 {

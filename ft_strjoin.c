@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 //import `malloc`
 #include <stdlib.h>
 
-/** \brief join two strings into a new one
+/** @brief join two strings into a new one
  *
- * \param s1	first string
- * \param s2	second string
- * \return new string
- * \retval 0 joining failed
+ * @param s1	first string
+ * @param s2	second string
+ * @return new string
+ * @retval 0 joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {

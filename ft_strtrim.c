@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:10:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 //import `malloc`
 #include <stdlib.h>
 
-/** \brief checks if string contains a char
+/** @brief checks if string contains a char
  *
- * \param str	string
- * \param c		character
- * \retval 0 `false`
- * \retval 1 `true`
+ * @param str	string
+ * @param c		character
+ * @retval 0 `false`
+ * @retval 1 `true`
  */
 static int	ft_strcontains(const char *str, const char c)
 {
@@ -35,12 +35,12 @@ static int	ft_strcontains(const char *str, const char c)
 	return (0);
 }
 
-/** \brief trim a string
+/** @brief trim a string
  *
- * \param s1	string to trim
- * \param set	set of characters to be removed
- * \return new trimmed string
- * \retval 0 trimming failed
+ * @param s1	string to trim
+ * @param set	set of characters to be removed
+ * @return new trimmed string
+ * @retval 0 trimming failed
 */
 char	*ft_strtrim(char const *s1, char const *set)
 {

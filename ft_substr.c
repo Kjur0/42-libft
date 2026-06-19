@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:19:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 14:39:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 //import `malloc`
 #include <stdlib.h>
 
-/** \brief create a substring from a string
+/** @brief create a substring from a string
  *
- * \param s		original string
- * \param start	starting index of the substring
- * \param len	max length of a the substring
- * \return created substring
- * \retval 0 creation failed
+ * @param s		original string
+ * @param start	starting index of the substring
+ * @param len	max length of a the substring
+ * @return created substring
+ * @retval 0 creation failed
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

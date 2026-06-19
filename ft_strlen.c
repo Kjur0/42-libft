@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:39:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:36:27 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 //# Part 1
 //## string manipulation
 
-/** \brief calculate string length
+/** @brief calculate string length
  *
  * count characters up to first `NUL`-terminator (`'\0'`)
  *
- * \param s string being array of `char`
- * \return length of a string
+ * @param s string being array of `char`
+ * @return length of a string
  */
 size_t	ft_strlen(const char *s)
 {
