@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:34:45 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 17:52:48 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //# Part 1
 //## char checks
 
-/** @brief checks is the character in ASCII range
+/** @brief check is the character in ASCII range
  *
  * checks if value is between `0` and `127` (7-bit unsigned integer)
  *

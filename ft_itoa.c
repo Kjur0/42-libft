@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 18:28:43 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static size_t	count_digits(int n)
 }
 
 /**
- * @brief converts number to string
+ * @brief convert number to string
  *
  * @param n number to be converted
  * @return string representing the number

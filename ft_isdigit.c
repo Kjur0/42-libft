@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:26:59 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 17:52:20 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //# Part 1
 //## char checks
 
-/** @brief checks for a digit
+/** @brief check for a digit
  *
  * @param c character to check
  * @retval 0 `false`

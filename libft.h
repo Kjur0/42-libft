@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 17:27:09 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 18:38:23 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@
 //# Part 1 - libc
 
 //## char checks
-/** @brief checks for an alphabetic character
+/** @brief check for an alphabetic character
  *
  * @param c character to check
  * @retval 0 `false`
  * @retval 1 `true`
  */
 int		ft_isalpha(int c);
-/** @brief checks for a digit
+/** @brief check for a digit
  *
  * @param c character to check
  * @retval 0 `false`
  * @retval 1 `true`
  */
 int		ft_isdigit(int c);
-/** @brief checks for an alphanumeric character
+/** @brief check for an alphanumeric character
  *
  * equivilent to:
  * ```c
@@ -44,7 +44,7 @@ int		ft_isdigit(int c);
  * @retval 1 `true`
  */
 int		ft_isalnum(int c);
-/** @brief checks is the character in ASCII range
+/** @brief check is the character in ASCII range
  *
  * checks if value is between `0` and `127` (7-bit unsigned integer)
  *
@@ -53,7 +53,7 @@ int		ft_isalnum(int c);
  * @retval 1 `true`
  */
 int		ft_isascii(int c);
-/** @brief checks is the character printable (non-control)
+/** @brief check is the character printable (non-control)
  *
  * @param c character to check
  * @retval 0 `false`
@@ -274,7 +274,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 */
 char	**ft_split(char const *s, char c);
 /**
- * @brief converts number to string
+ * @brief convert number to string
  *
  * @param n number to be converted
  * @return string representing the number
@@ -289,7 +289,7 @@ char	*ft_itoa(int n);
  * @retval 0 mapping failed
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-/** @brief interate over a string
+/** @brief iterate over a string
  *
  * @param s string to iterate over
  * @param f function
@@ -343,7 +343,7 @@ t_list	*ft_lstnew(void *content);
  * @param new list node to be added
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
-/** @brief count node in a list
+/** @brief count nodes in a list
  *
  * @param lst first node of a list
  * @return number of nodes

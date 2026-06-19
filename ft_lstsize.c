@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 17:07:10 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 17:09:56 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 18:38:26 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //# Part 3
 //## linked list
 
-/** @brief count node in a list
+/** @brief count nodes in a list
  *
  * @param lst first node of a list
  * @return number of nodes
