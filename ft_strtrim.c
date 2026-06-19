@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/18 20:49:06 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 16:10:16 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (*s1 && ft_strcontains(set, *s1))
 		s1++;
 	len = ft_strlen(s1);
-	while (len + 1 > 0 && s1[len - 1])
+	while (len + 1 > 0 && ft_strcontains(set, s1[len - 1]))
 		len--;
 	str = malloc(len + 1);
 	if (str)
