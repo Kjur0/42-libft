@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:13:36 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:41:49 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 21:31:24 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*dest_writeable;
 	const unsigned char	*src_readable = src;
 
+	if (!dest || !src)
+		return (dest);
 	dest_writeable = dest;
 	if (n == 0 || dest_writeable == src_readable)
 		return (dest_writeable);

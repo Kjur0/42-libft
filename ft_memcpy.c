@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:41:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 21:28:04 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*dest_writeable;
 	const unsigned char	*src_readable = src;
 
+	if (!dest)
+		return (0);
+	if (!src)
+		return (dest);
 	i = 0;
 	dest_writeable = dest;
 	while (i < n)

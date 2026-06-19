@@ -94,12 +94,12 @@ Functions from `libc` that are most commonly needed during **42 curriculum**
 #### string manipulation functions
 
 * [`ft_strlen`](ft_strlen.c) - calculate string length
-* [`ft_strlcpy`](ft_strlcpy.c) - safely copy a string
-* [`ft_strlcat`](ft_strlcat.c) - safely concatenate two strings
+* [`ft_strlcpy`](ft_strlcpy.c)[^bsd] - safely copy a string
+* [`ft_strlcat`](ft_strlcat.c)[^bsd] - safely concatenate two strings
 * [`ft_strchr`](ft_strchr.c) - locate character in a string
 * [`ft_strrchr`](ft_strrchr.c) - locate character in a string (reverse)
 * [`ft_strncmp`](ft_strncmp.c) - compare two strings
-* [`ft_strnstr`](ft_strnstr.c) - locate a substring in a string
+* [`ft_strnstr`](ft_strnstr.c)[^bsd] - locate a substring in a string
 * [`ft_strdup`](ft_strdup.c) - duplicate a string
 
 #### memory manipulating functions
@@ -115,6 +115,8 @@ Functions from `libc` that are most commonly needed during **42 curriculum**
 #### string converting functions
 
 * [`ft_atoi`](ft_atoi.c) - convert string to a number
+
+[^bsd]: Functions are from `libbsd` not `libc`
 
 ### Part 2 - Additional functions
 
