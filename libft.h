@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 17:24:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/19 17:27:09 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -360,7 +360,7 @@ t_list	*ft_lstlast(t_list *lst);
  * @param lst first node of a list
  * @param new list node to be added
  */
-void	ft_lst_add_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 /** @brief delete a node
  *
  * @param lst node to be deleted
