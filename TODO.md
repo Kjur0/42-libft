@@ -36,7 +36,7 @@
 - [x] `ft_putnbr_fd`
 
 # Part 3
-- [x] `ft_list`
+- [x] `t_list`
 - [x] `ft_lstnew`
 - [x] `ft_lstadd_front`
 - [x] `ft_lstsize`

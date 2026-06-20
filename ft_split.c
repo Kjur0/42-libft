@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:11:56 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ static int	count_words(const char *str, char c)
 	size_t	i;
 	size_t	count;
 
+	if (!str)
+		return (0);
 	i = 0;
 	count = 0;
 	while (str[i])
@@ -103,7 +105,8 @@ char	**ft_split(char const *s, char c)
 	size_t			i;
 	size_t			j;
 
-	arr = malloc(sizeof(char *) * (words + 1));
+	if (s)
+		arr = malloc(sizeof(char *) * (words + 1));
 	if (!arr)
 		return (0);
 	i = 0;

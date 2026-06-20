@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:42:01 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:12:28 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ int	ft_atoi(const char *nptr)
 	signed int			sign;
 
 	i = 0;
-	while (ft_isspace(nptr[i]))
+	while (nptr && ft_isspace(nptr[i]))
 		i++;
 	sign = 1;
-	if (nptr[i] == '+')
+	if (nptr && nptr[i] == '+')
 		i++;
-	else if (nptr[i] == '-')
+	else if (nptr && nptr[i] == '-')
 	{
 		sign = -1;
 		i++;
 	}
 	n = 0;
-	while (ft_isdigit(nptr[i]))
+	while (nptr && ft_isdigit(nptr[i]))
 	{
 		n = 10 * n + (nptr[i++] - '0');
 		if (n > 9223372036854775807ULL && sign == 1)

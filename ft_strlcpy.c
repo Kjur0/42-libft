@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:55:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 19:34:11 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:14:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	const size_t	src_len = ft_strlen(src);
 	size_t			i;
 
+	if (!dst)
+		return (0);
 	i = 0;
 	while (i + 1 < size && src[i])
 	{

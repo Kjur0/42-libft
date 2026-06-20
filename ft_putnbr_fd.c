@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:22:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:35:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:10:30 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
+	if (fd < 1)
+		return ;
 	if (n < 0)
 	{
 		write(fd, "-", 1);

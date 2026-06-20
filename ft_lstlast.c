@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 17:10:02 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 17:10:18 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 14:45:09 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
  */
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (lst);
 	while (lst->next)
 		lst = lst->next;
 	return (lst);

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:58:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 21:10:34 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:15:35 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t			append;
 	size_t			i;
 
+	if (!dst)
+		return (0);
 	dst_len = 0;
 	i = 0;
 	while (dst_len < size && dst[dst_len])

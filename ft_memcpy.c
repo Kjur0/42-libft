@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 21:28:04 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 19:31:52 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!dest)
 		return (0);
 	if (!src)
+		return (dest);
+	if ((src <= dest && src + n >= dest) || (dest <= src && dest + n >= src))
 		return (dest);
 	i = 0;
 	dest_writeable = dest;

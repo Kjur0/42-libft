@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:17:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:35:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:10:48 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
  */
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (fd < 1 || !s)
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

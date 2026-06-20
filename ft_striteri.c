@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:11:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 18:29:13 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 15:35:36 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	ft_striteri(char const *s, void (*f)(unsigned int, char))
 {
 	size_t	i;
 
+	if (!f || !s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

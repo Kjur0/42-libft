@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:24:49 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:42:42 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/20 20:19:37 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strrchr(const char *s, int c)
 	size_t			i;
 	unsigned char	value;
 
+	if (!s)
+		return (0);
 	i = 1;
 	value = c;
 	while (s[i - 1])

@@ -6,17 +6,19 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/19 17:35:02 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/20 20:55:55 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			=	cc
+CXX			=	c++
 CFLAGS		=	-Wall -Wextra -Werror -I .
-DBGFLAGS	=	-g
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++17 -I .
 AR			=	ar
 ARFLAGS		=	rcs
 
 NAME		=	libft.a
+TEST_NAME	=	libft-test
 
 SRCS		=	ft_isalpha.c \
 				ft_isdigit.c \
@@ -62,31 +64,70 @@ SRCS		=	ft_isalpha.c \
 				ft_lstiter.c \
 				ft_lstmap.c
 
-OBJS		=	$(SRCS:%.c=%.o)
+OBJS_DIR	=	objs
+OBJS		=	$(SRCS:%.c=$(OBJS_DIR)/%.o)
 
-RM			=	rm -f
+TESTS_DIR	=	tests
+TESTS_SRC	=	$(SRCS:ft_%.c=$(TESTS_DIR)/%.cpp) $(TESTS_DIR)/_main.cpp
+TESTS_OBJS	=	$(TESTS_SRC:$(TESTS_DIR)/%.cpp=$(OBJS_DIR)/%.test.o)
+GTEST_FLAGS	=	-lgtest -lpthread
+
+RM			=	rm -rf
+
+RED			=	\033[;31m
+GREEN		=	\033[;32m
+YELLOW		=	\033[;33m
+BLUE		=	\033[;34m
+MAGENTA		=	\033[;35m
+CYAN		=	\033[;36m
+RESET		=	\033[0m
+POSITION	=	\033[2K\r
 
 all: $(NAME)
-
+	@echo "$(POSITION)$(GREEN)$(NAME) is ready to use.$(RESET)"
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "$(BLUE)Creating $(NAME)...$(RESET)"
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "$(GREEN)$(NAME) has been created successfully!$(RESET)"
 
-%:	%.c
-	$(CC) $(CFLAGS) -c $< -o $@.o
+%:	$(OBJS_DIR)/%.o
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+	@echo -n "$(YELLOW)Compiling $<...$(RESET)"
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(POSITION)$(GREEN)Compiled $< successfully!$(RESET)"
+
+$(OBJS_DIR)/%.test.o: $(TESTS_DIR)/%.cpp | $(OBJS_DIR)
+	@echo -n "$(YELLOW)Compiling test $<...$(RESET)"
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@echo "$(POSITION)$(GREEN)Compiled test $< successfully!$(RESET)"
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS_DIR)
+	@echo "$(RED)Cleaned object files.$(RESET)"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@$(RM) $(TEST_NAME)
+	@echo "$(RED)Fully cleaned all generated files.$(RESET)"
+
+$(OBJS_DIR):
+	@mkdir -p $(OBJS_DIR)
+	@echo "$(CYAN)Created objects directory.$(RESET)"
 
 re: fclean all
+	@echo "$(GREEN)Rebuild complete!$(RESET)"
 
-debug: CFLAGS += $(DBGFLAGS)
-debug: re
+test: $(TEST_NAME)
+	@echo "$(MAGENTA)Running tests...$(RESET)"
+	@mkdir -p /tmp/tests
+	./$(TEST_NAME)
+	@$(RM) -rf /tmp/tests
 
-.PHONY: all clean fclean re debug
+$(TEST_NAME): $(TESTS_OBJS) $(OBJS)
+	@echo -n "$(YELLOW)Linking test executable...$(RESET)"
+	@$(CXX) $(CXXFLAGS) -o $(TEST_NAME) $(TESTS_OBJS) $(OBJS) -lbsd $(GTEST_FLAGS)
+	@echo "$(POSITION)$(GREEN)Test executable $(TEST_NAME) is ready!$(RESET)"
+
+.PHONY: all clean fclean re test
