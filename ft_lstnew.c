@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:54:09 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 11:29:39 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*new;
 
 	new = malloc(sizeof(t_list));
+	if (!new)
+		return 0;
 	new->content = content;
 	new->next = 0;
 	return (new);

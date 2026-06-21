@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 20:11:56 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 11:44:08 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static char	**free_arr(char **arr, size_t len)
 
 /** @brief counts words in a string (delimited)
  *
- * @param str string
- * @param c delimiter
+ * @param str	string
+ * @param c		delimiter
  * @return number of words
  */
 static int	count_words(const char *str, char c)

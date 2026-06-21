@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 18:38:23 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 11:47:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -389,6 +389,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * @return new list
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
 
 #endif
