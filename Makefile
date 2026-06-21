@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/20 20:55:55 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/21 10:36:55 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ RESET		=	\033[0m
 POSITION	=	\033[2K\r
 
 all: $(NAME)
-	@echo "$(POSITION)$(GREEN)$(NAME) is ready to use.$(RESET)"
+	@echo "$(GREEN)$(NAME) is ready to use.$(RESET)"
 
 $(NAME): $(OBJS)
 	@echo "$(BLUE)Creating $(NAME)...$(RESET)"
