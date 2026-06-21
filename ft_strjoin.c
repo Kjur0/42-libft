@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 20:13:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:01:02 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  *
  * @param s1	first string
  * @param s2	second string
- * @return new string
- * @retval 0 joining failed
+ * @return		new string
+ * @retval 0	joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {

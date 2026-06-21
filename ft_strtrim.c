@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 20:20:07 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:01:27 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  *
  * @param str	string
  * @param c		character
- * @retval 0 `false`
- * @retval 1 `true`
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 static int	ft_strcontains(const char *str, const char c)
 {
@@ -39,8 +39,8 @@ static int	ft_strcontains(const char *str, const char c)
  *
  * @param s1	string to trim
  * @param set	set of characters to be removed
- * @return new trimmed string
- * @retval 0 trimming failed
+ * @return		new trimmed string
+ * @retval 0	trimming failed
 */
 char	*ft_strtrim(char const *s1, char const *set)
 {

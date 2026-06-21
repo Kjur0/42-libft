@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 18:28:43 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:00:12 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 /** @brief count number of digits in a number
  *
- * @param n number
- * @return number of digits
+ * @param n	number
+ * @return	number of digits
  */
 static size_t	count_digits(int n)
 {
@@ -45,9 +45,9 @@ static size_t	count_digits(int n)
 /**
  * @brief convert number to string
  *
- * @param n number to be converted
- * @return string representing the number
- * @retval 0 convertion failed
+ * @param n		number to be converted
+ * @return		string representing the number
+ * @retval 0	convertion failed
  */
 char	*ft_itoa(int n)
 {

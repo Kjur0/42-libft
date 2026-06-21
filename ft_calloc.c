@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:35:05 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 16:36:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:59:54 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  *
  * @param nmemb	number of members
  * @param size	size of a member
- * @return pointer to dynamic memory
- * @retval 0 allocation failed
+ * @return		pointer to dynamic memory
+ * @retval 0	allocation failed
  */
 void	*ft_calloc(size_t nmemb, size_t size)
 {

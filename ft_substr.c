@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:19:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 20:20:24 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:00:44 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
  * @param s		original string
  * @param start	starting index of the substring
  * @param len	max length of a the substring
- * @return created substring
- * @retval 0 creation failed
+ * @return		created substring
+ * @retval 0	creation failed
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

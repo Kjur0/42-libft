@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:43:16 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 19:56:34 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:58:25 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 /** @brief fill memory area with constant byte
  *
- * @param s pointer to memory area
- * @param c constant byte for filling
- * @param n number of bytes to fill
- * @return pointer to filled memory (`s`)
+ * @param s	pointer to memory area
+ * @param c	constant byte for filling
+ * @param n	number of bytes to fill
+ * @return	pointer to filled memory (`s`)
  */
 void	*ft_memset(void *s, int c, size_t n)
 {

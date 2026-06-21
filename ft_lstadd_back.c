@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:56:25 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 15:14:51 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:04:40 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 /** @brief add node to the back of a list
  *
- * @param lst first node of a list
- * @param new list node to be added
+ * @param lst	first node of a list
+ * @param new	list node to be added
  */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

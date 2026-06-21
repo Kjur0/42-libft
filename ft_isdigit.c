@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:26:59 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 17:52:20 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:37:23 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 /** @brief check for a digit
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int	ft_isdigit(int c)
 {

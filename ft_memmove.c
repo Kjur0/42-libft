@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:13:36 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/19 21:31:24 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:58:53 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param dest	pointer to destination
  * @param src	pointer to source
  * @param n		number of bytes to move (length)
- * @return pointer to destination
+ * @return		pointer to destination
  */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

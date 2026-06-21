@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:56:25 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 15:15:12 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:04:04 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 /** @brief add node to front of list
  *
- * @param lst pointer to first node of a list
- * @param new pointer to a list node to be added
+ * @param lst	pointer to first node of a list
+ * @param new	pointer to a list node to be added
  */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

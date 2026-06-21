@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:07:11 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 19:31:52 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:58:47 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param dest	pointer to destination
  * @param src	pointer to source
  * @param n		number of bytes to copy (length)
- * @return pointer to destination
+ * @return		pointer to destination
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

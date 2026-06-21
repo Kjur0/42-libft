@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:39:46 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 19:56:43 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 13:45:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
  *
  * count characters up to first `NUL`-terminator (`'\0'`)
  *
- * @param s string being array of `char`
- * @return length of a string
+ * @param s	string being array of `char`
+ * @return	length of a string
  */
 size_t	ft_strlen(const char *s)
 {

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 11:47:13 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:06:46 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@
 //## char checks
 /** @brief check for an alphabetic character
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int		ft_isalpha(int c);
 /** @brief check for a digit
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int		ft_isdigit(int c);
 /** @brief check for an alphanumeric character
@@ -39,25 +39,25 @@ int		ft_isdigit(int c);
  * ft_isalpha(c) || ft_isdigit(c)
  * ```
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int		ft_isalnum(int c);
 /** @brief check is the character in ASCII range
  *
  * checks if value is between `0` and `127` (7-bit unsigned integer)
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int		ft_isascii(int c);
 /** @brief check is the character printable (non-control)
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 int		ft_isprint(int c);
 
@@ -66,16 +66,16 @@ int		ft_isprint(int c);
  *
  * @note inputs are treated as `unsigned char` (except for `-1`)
  *
- * @param c lowercase character
- * @return uppercase character
+ * @param c	lowercase character
+ * @return	uppercase character
  */
 int		ft_toupper(int c);
 /** @brief convert character to lowercase
  *
  * @note inputs are treated as `unsigned char` (except for `-1`)
  *
- * @param c uppercase character
- * @return lowercase character
+ * @param c	uppercase character
+ * @return	lowercase character
  */
 int		ft_tolower(int c);
 
@@ -84,8 +84,8 @@ int		ft_tolower(int c);
  *
  * count characters up to first `NUL`-terminator (`'\0'`)
  *
- * @param s string being array of `char`
- * @return length of a string
+ * @param s	string being array of `char`
+ * @return	length of a string
  */
 size_t	ft_strlen(const char *s);
 /** @brief safely copy a string
@@ -96,7 +96,7 @@ size_t	ft_strlen(const char *s);
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return `ft_strlen(src) + min(size, ft_strlen(dst))`
+ * @return 		ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** @brief safely concatenate two strings
@@ -107,7 +107,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return `ft_strlen(src)`
+ * @return		`ft_strlen(src)`
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /** @brief locate character in a string
@@ -116,10 +116,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  *
  * @note inputs are treated as `unsigned char`
  *
- * @param s string
- * @param c char to locate
- * @return pointer to first occurrence
- * @retval 0 character not found
+ * @param s		string
+ * @param c		char to locate
+ * @return		pointer to first occurrence
+ * @retval 0	character not found
 */
 char	*ft_strchr(const char *s, int c);
 /** @brief locate character in a string (reverse)
@@ -128,10 +128,10 @@ char	*ft_strchr(const char *s, int c);
  *
  * @note inputs are treated as `unsigned char`
  *
- * @param s string
- * @param c char to locate
- * @return pointer to last occurrence
- * @retval 0 character not found
+ * @param s		string
+ * @param c		char to locate
+ * @return		pointer to last occurrence
+ * @retval 0	character not found
  */
 char	*ft_strrchr(const char *s, int c);
 /** @brief compare two strings
@@ -142,8 +142,8 @@ char	*ft_strrchr(const char *s, int c);
  * @param s1	first string
  * @param s2	second string
  * @param n		max length for comparison
- * @return difference between first unmatched chars
- * @retval 0 no difference
+ * @return		difference between first unmatched chars
+ * @retval 0	no difference
  */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 /** @brief locate a substring in a string
@@ -151,31 +151,31 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  * @param big		string to search in
  * @param little	string to search for
  * @param len		max length for searching
- * @return pointer to substring
- * @retval 0 substring not located
+ * @return			pointer to substring
+ * @retval 0		substring not located
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 /** @brief duplicate a string
  *
- * @param s string to duplicate
- * @return duplicated string
- * @retval 0 duplication failed
+ * @param s		string to duplicate
+ * @return		duplicated string
+ * @retval 0	duplication failed
  */
 char	*ft_strdup(const char *s);
 
 //## memory manipulation
 /** @brief fill memory area with constant byte
  *
- * @param s pointer to memory area
- * @param c constant byte for filling
- * @param n number of bytes to fill
- * @return pointer to filled memory (`s`)
+ * @param s	pointer to memory area
+ * @param c	constant byte for filling
+ * @param n	number of bytes to fill
+ * @return	pointer to filled memory (`s`)
  */
 void	*ft_memset(void *s, int c, size_t n);
 /** @brief fill memory area with zero
  *
- * @param s pointer to memory area
- * @param n number of bytes to zero
+ * @param s	pointer to memory area
+ * @param n	number of bytes to zero
  */
 void	ft_bzero(void *s, size_t n);
 /** @brief copy memory area
@@ -185,7 +185,7 @@ void	ft_bzero(void *s, size_t n);
  * @param dest	pointer to destination
  * @param src	pointer to source
  * @param n		number of bytes to copy (length)
- * @return pointer to destination
+ * @return		pointer to destination
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 /** @brief move memory area
@@ -195,18 +195,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  * @param dest	pointer to destination
  * @param src	pointer to source
  * @param n		number of bytes to move (length)
- * @return pointer to destination
+ * @return		pointer to destination
  */
 void	*ft_memmove(void *dest, const void *src, size_t n);
 /** @brief scan memory for a byte
  *
  * first occurrence
  *
- * @param s pointer to memory area
- * @param c byte to search for
- * @param n size of memory area
- * @return pointer to first occurrence
- * @retval 0 byte not found
+ * @param s		pointer to memory area
+ * @param c		byte to search for
+ * @param n		size of memory area
+ * @return		pointer to first occurrence
+ * @retval 0	byte not found
 */
 void	*ft_memchr(const void *s, int c, size_t n);
 /** @brief compare memory areas
@@ -214,16 +214,16 @@ void	*ft_memchr(const void *s, int c, size_t n);
  * @param s1	first memory area
  * @param s2	second memory area
  * @param n		size to compare
- * @return difference between first unmatched bytes
- * @retval 0 no difference
+ * @return		difference between first unmatched bytes
+ * @retval 0	no difference
 */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 /** @brief allocate dynamic memory for an array
  *
  * @param nmemb	number of members
  * @param size	size of a member
- * @return pointer to dynamic memory
- * @retval 0 allocation failed
+ * @return		pointer to dynamic memory
+ * @retval 0	allocation failed
  */
 void	*ft_calloc(size_t nmemb, size_t size);
 
@@ -232,8 +232,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
  *
  * @warning errors are not detected
  *
- * @param nptr string
- * @return number
+ * @param nptr	string
+ * @return		number
  */
 int		ft_atoi(const char *nptr);
 
@@ -245,56 +245,56 @@ int		ft_atoi(const char *nptr);
  * @param s		original string
  * @param start	starting index of the substring
  * @param len	max length of a the substring
- * @return created substring
- * @retval 0 creation failed
+ * @return		created substring
+ * @retval 0	creation failed
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 /** @brief join two strings into a new one
  *
  * @param s1	first string
  * @param s2	second string
- * @return new string
- * @retval 0 joining failed
+ * @return		new string
+ * @retval 0	joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2);
 /** @brief trim a string
  *
  * @param s1	string to trim
  * @param set	set of characters to be removed
- * @return new trimmed string
- * @retval 0 trimming failed
+ * @return		new trimmed string
+ * @retval 0	trimming failed
 */
 char	*ft_strtrim(char const *s1, char const *set);
 /** @brief split a string
  *
- * @param s	string to split
- * @param c	delimiter
- * @return `NUL`-terminated array of strings
- * @retval 0 spliting failed
+ * @param s		string to split
+ * @param c		delimiter
+ * @return		`NUL`-terminated array of strings
+ * @retval 0	spliting failed
 */
 char	**ft_split(char const *s, char c);
 /**
  * @brief convert number to string
  *
- * @param n number to be converted
- * @return string representing the number
- * @retval 0 convertion failed
+ * @param n		number to be converted
+ * @return		string representing the number
+ * @retval 0	convertion failed
  */
 char	*ft_itoa(int n);
 /** @brief map a string
  *
- * @param s string to map
- * @param f function used for mapping
- * @return new string
- * @retval 0 mapping failed
+ * @param s		string to map
+ * @param f		function used for mapping
+ * @return		new string
+ * @retval 0	mapping failed
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /** @brief iterate over a string
  *
- * @param s string to iterate over
- * @param f function
+ * @param s	string to iterate over
+ * @param f	function
  */
-void	ft_striteri(char const *s, void (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 //## writing
 /** @brief write a character
@@ -333,46 +333,46 @@ typedef struct s_list
 
 /** @brief create a new list node
  *
- * @param content content to be stored in the node
- * @return pointer to new list node
+ * @param content	content to be stored in the node
+ * @return			pointer to new list node
  */
 t_list	*ft_lstnew(void *content);
 /** @brief add node to front of list
  *
- * @param lst first node of a list
- * @param new list node to be added
+ * @param lst	first node of a list
+ * @param new	list node to be added
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
 /** @brief count nodes in a list
  *
- * @param lst first node of a list
- * @return number of nodes
+ * @param lst	first node of a list
+ * @return		number of nodes
  */
 int		ft_lstsize(t_list *lst);
 /** @brief get last node of a list
  *
- * @param lst first node of a list
- * @return last node in a list
+ * @param lst	first node of a list
+ * @return		last node in a list
  */
 t_list	*ft_lstlast(t_list *lst);
 /** @brief add node to the back of a list
  *
- * @param lst first node of a list
- * @param new list node to be added
+ * @param lst	first node of a list
+ * @param new	list node to be added
  */
 void	ft_lstadd_back(t_list **lst, t_list *new);
 /** @brief delete a node
  *
- * @param lst node to be deleted
- * @param del function used to delete content
+ * @param lst	node to be deleted
+ * @param del	function used to delete content
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 /** @brief delete a list
  *
  * @warning this will delete all the nodes
  *
- * @param lst first node of a list
- * @param del function used to delete content
+ * @param lst	first node of a list
+ * @param del	function used to delete content
  */
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 /** @brief iterate over a list
@@ -386,7 +386,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * @param lst	first node of a list to map
  * @param f		function used for mapping
  * @param del	function used to delete content
- * @return new list
+ * @return		new list
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 

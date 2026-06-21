@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 20:12:28 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:00:25 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
  *
  * These are ` `, `\f`, `\n`, `\r`, `\t` and `\v`
  *
- * @param c character to check
- * @retval 0 `false`
- * @retval 1 `true`
+ * @param c		character to check
+ * @retval 0	`false`
+ * @retval 1	`true`
  */
 static int	ft_isspace(int c)
 {
@@ -31,8 +31,8 @@ static int	ft_isspace(int c)
  *
  * @warning errors are not detected
  *
- * @param nptr string
- * @return number
+ * @param nptr	string
+ * @return		number
  */
 int	ft_atoi(const char *nptr)
 {

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 15:03:24 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:04:49 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 /** @brief delete a node
  *
- * @param lst node to be deleted
- * @param del function used to delete content
+ * @param lst	node to be deleted
+ * @param del	function used to delete content
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

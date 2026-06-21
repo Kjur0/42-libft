@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 11:51:39 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:05:11 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  * @param lst	first node of a list to map
  * @param f		function used for mapping
  * @param del	function used to delete content
- * @return new list
+ * @return		new list
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

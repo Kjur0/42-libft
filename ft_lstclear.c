@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 15:13:57 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:04:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
  *
  * @warning this will delete all the nodes
  *
- * @param lst first node of a list
- * @param del function used to delete content
+ * @param lst	first node of a list
+ * @param del	function used to delete content
  */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

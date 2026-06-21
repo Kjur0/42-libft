@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:11:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/20 15:35:36 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/21 14:06:42 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 /** @brief iterate over a string
  *
- * @param s string to iterate over
- * @param f function
+ * @param s	string to iterate over
+ * @param f	function
  */
-void	ft_striteri(char const *s, void (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
@@ -28,7 +28,7 @@ void	ft_striteri(char const *s, void (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
