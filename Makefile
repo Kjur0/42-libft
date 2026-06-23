@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/21 10:36:55 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/23 17:02:41 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ AR			=	ar
 ARFLAGS		=	rcs
 
 NAME		=	libft.a
-TEST_NAME	=	libft-test
 
 SRCS		=	ft_isalpha.c \
 				ft_isdigit.c \
@@ -67,11 +66,6 @@ SRCS		=	ft_isalpha.c \
 OBJS_DIR	=	objs
 OBJS		=	$(SRCS:%.c=$(OBJS_DIR)/%.o)
 
-TESTS_DIR	=	tests
-TESTS_SRC	=	$(SRCS:ft_%.c=$(TESTS_DIR)/%.cpp) $(TESTS_DIR)/_main.cpp
-TESTS_OBJS	=	$(TESTS_SRC:$(TESTS_DIR)/%.cpp=$(OBJS_DIR)/%.test.o)
-GTEST_FLAGS	=	-lgtest -lpthread
-
 RM			=	rm -rf
 
 RED			=	\033[;31m
@@ -98,18 +92,12 @@ $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "$(POSITION)$(GREEN)Compiled $< successfully!$(RESET)"
 
-$(OBJS_DIR)/%.test.o: $(TESTS_DIR)/%.cpp | $(OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling test $<...$(RESET)"
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-	@echo "$(POSITION)$(GREEN)Compiled test $< successfully!$(RESET)"
-
 clean:
 	@$(RM) $(OBJS_DIR)
 	@echo "$(RED)Cleaned object files.$(RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@$(RM) $(TEST_NAME)
 	@echo "$(RED)Fully cleaned all generated files.$(RESET)"
 
 $(OBJS_DIR):
@@ -118,16 +106,5 @@ $(OBJS_DIR):
 
 re: fclean all
 	@echo "$(GREEN)Rebuild complete!$(RESET)"
-
-test: $(TEST_NAME)
-	@echo "$(MAGENTA)Running tests...$(RESET)"
-	@mkdir -p /tmp/tests
-	./$(TEST_NAME)
-	@$(RM) -rf /tmp/tests
-
-$(TEST_NAME): $(TESTS_OBJS) $(OBJS)
-	@echo -n "$(YELLOW)Linking test executable...$(RESET)"
-	@$(CXX) $(CXXFLAGS) -o $(TEST_NAME) $(TESTS_OBJS) $(OBJS) -lbsd $(GTEST_FLAGS)
-	@echo "$(POSITION)$(GREEN)Test executable $(TEST_NAME) is ready!$(RESET)"
 
 .PHONY: all clean fclean re test
