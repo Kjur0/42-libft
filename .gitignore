@@ -1,3 +1,2 @@
-*.o
+objs/
 libft.a
-libft-test
