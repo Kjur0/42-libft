@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:47:53 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 13:58:39 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:19:12 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,13 @@
  */
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	unsigned char		*ptr;
+	size_t				i;
+
+	if (!s)
+		return ;
+	i = 0;
+	ptr = s;
+	while (i < n)
+		ptr[i++] = 0;
 }

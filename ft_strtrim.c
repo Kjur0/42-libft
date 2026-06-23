@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:01:27 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:17:38 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,8 @@
  */
 static int	ft_strcontains(const char *str, const char c)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		if (str[i++] == c)
+	while (*str)
+		if (*str++ == c)
 			return (1);
 	return (0);
 }

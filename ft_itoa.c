@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:00:12 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:30:11 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  * @param n	number
  * @return	number of digits
  */
-static size_t	count_digits(int n)
+static size_t	ft_count_digits(int n)
 {
 	size_t	res;
 
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 	char		*out;
 	const int	sign = n < 0;
 
-	len = count_digits(n);
+	len = ft_count_digits(n);
 	out = malloc(len + 1);
 	if (!out)
 		return (0);

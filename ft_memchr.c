@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 14:45:24 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 13:59:28 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:08:59 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,11 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*ptr = s;
-	unsigned char		byte;
+	const unsigned char	byte = c;
 	size_t				i;
 
 	if (!s)
 		return (0);
-	byte = c;
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:04:55 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:20:39 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		next = (*lst)->next;
-		ft_lstdelone(*lst, del);
+		if ((*lst)->content && del)
+			del((*lst)->content);
+		free(*lst);
 		*lst = next;
 	}
 }

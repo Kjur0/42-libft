@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:43:16 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 13:58:25 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:10:25 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@
  */
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
-	unsigned char	byte;
-	size_t			i;
+	unsigned char		*ptr;
+	const unsigned char	byte = c;
+	size_t				i;
 
 	if (!s)
 		return (0);
 	i = 0;
-	byte = c;
 	ptr = s;
 	while (i < n)
 		ptr[i++] = byte;

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/19 16:52:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:05:11 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:08:32 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new = 0;
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
-		if (!tmp)
+		if (lst->content)
 		{
-			ft_lstclear(&new, del);
-			return (0);
+			tmp = ft_lstnew(f(lst->content));
+			if (!tmp)
+			{
+				ft_lstclear(&new, del);
+				return (0);
+			}
+			ft_lstadd_back(&new, tmp);
 		}
-		ft_lstadd_back(&new, tmp);
 		lst = lst->next;
 	}
 	return (new);

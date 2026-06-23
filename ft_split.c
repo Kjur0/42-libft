@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:01:50 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:33:57 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  * @param len	lenght of array
  * @return		`nullptr`
  */
-static char	**free_arr(char **arr, size_t len)
+static char	**ft_free_arr(char **arr, size_t len)
 {
 	size_t	i;
 
@@ -40,24 +40,22 @@ static char	**free_arr(char **arr, size_t len)
  * @param c		delimiter
  * @return		number of words
  */
-static int	count_words(const char *str, char c)
+static size_t	ft_count_words(const char *str, char c)
 {
-	size_t	i;
 	size_t	count;
 
 	if (!str)
 		return (0);
-	i = 0;
 	count = 0;
-	while (str[i])
+	while (*str)
 	{
-		while (str[i] == c)
-			i++;
-		if (!str[i])
+		while (*str == c)
+			str++;
+		if (!*str)
 			break ;
 		count++;
-		while (str[i] && str[i] != c)
-			i++;
+		while (*str && *str != c)
+			str++;
 	}
 	return (count);
 }
@@ -69,7 +67,7 @@ static int	count_words(const char *str, char c)
  * @return		word
  * @retval 0	action failed
  */
-static char	*word_dup(const char *str, char c)
+static char	*ft_word_dup(const char *str, char c)
 {
 	char	*dup;
 	size_t	i;
@@ -101,7 +99,7 @@ static char	*word_dup(const char *str, char c)
 char	**ft_split(char const *s, char c)
 {
 	char			**arr;
-	const size_t	words = count_words(s, c);
+	const size_t	words = ft_count_words(s, c);
 	size_t			i;
 	size_t			j;
 
@@ -117,9 +115,9 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (!s[i])
 			break ;
-		arr[j] = word_dup(&s[i], c);
+		arr[j] = ft_word_dup(&s[i], c);
 		if (!arr[j++])
-			return (free_arr(arr, j));
+			return (ft_free_arr(arr, j));
 		while (s[i] && s[i] != c)
 			i++;
 	}

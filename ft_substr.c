@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:19:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:00:44 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/23 21:17:59 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	size = ft_strlen((char *)s);
+	size = ft_strlen(s);
 	if (start >= size)
 		size = start;
 	size -= start;
