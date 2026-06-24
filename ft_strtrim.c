@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/23 21:17:38 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/24 11:17:39 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*str;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (0);
+	if (!set)
+		return (ft_strdup(s1));
 	while (*s1 && ft_strcontains(set, *s1))
 		s1++;
 	len = ft_strlen(s1);

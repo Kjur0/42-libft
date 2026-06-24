@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/23 21:33:57 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/24 12:00:43 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	**ft_split(char const *s, char c)
 
 	if (s)
 		arr = malloc(sizeof(char *) * (words + 1));
-	if (!arr)
+	if (!arr || !s)
 		return (0);
 	i = 0;
 	j = 0;
