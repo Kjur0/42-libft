@@ -6,11 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/24 11:17:39 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/25 17:41:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 //# Part 2
 //## string creation
 

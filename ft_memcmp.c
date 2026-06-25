@@ -6,11 +6,11 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:01:31 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 13:59:40 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/25 17:41:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 //# Part 1
 //## memory manipulation
 
@@ -35,7 +35,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (mem1[i]);
 	if (!s1 && !s2)
 		return (0);
-	while (i + 1 < n && mem1[i] == mem2[i])
+	while (i < n)
+	{
+		if (mem1[i] != mem2[i])
+			return (mem1[i] - mem2[i]);
 		i++;
-	return (mem1[i] - mem2[i]);
+	}
+	return (0);
 }

@@ -25,13 +25,10 @@ To compile `libft` just use `make`
 > `clean` : clean objects (remove `*.o` files)  
 > `fclean` : full clean (remove everything compiled)  
 > `re` : recompile and relink everything  
-> `test` : test the library with a custom test suite (see [Testing](#testing))
 
 ### Testing
 
 The library is tested with a custom test suite, which can be found [here](https://github.com/Kjur0/42-libft-test).
-
-All the tests are contained in `tests` directory, and can be run with `make test`.
 
 ## Resources
 

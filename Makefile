@@ -6,14 +6,12 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/23 17:02:41 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/25 17:40:24 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			=	cc
-CXX			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -I .
-CXXFLAGS	=	-Wall -Wextra -Werror -std=c++17 -I .
+CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar
 ARFLAGS		=	rcs
 
@@ -107,4 +105,4 @@ $(OBJS_DIR):
 re: fclean all
 	@echo "$(GREEN)Rebuild complete!$(RESET)"
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re
