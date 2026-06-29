@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 14:21:22 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/25 17:41:13 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/06/29 23:37:44 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (str1[i]);
 	if (!s1 && !s2)
 		return (0);
-	while (str1[i] && i < n)
+	while ((str1[i] || str2[i]) && i < n)
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
