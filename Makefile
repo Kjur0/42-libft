@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/06/25 17:40:24 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/06/30 18:51:50 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,16 +79,14 @@ all: $(NAME)
 	@echo "$(GREEN)$(NAME) is ready to use.$(RESET)"
 
 $(NAME): $(OBJS)
-	@echo "$(BLUE)Creating $(NAME)...$(RESET)"
+	@echo -n "$(BLUE)Creating $(NAME)...$(RESET)"
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-	@echo "$(GREEN)$(NAME) has been created successfully!$(RESET)"
-
-%:	$(OBJS_DIR)/%.o
+	@echo "$(POSITION)$(GREEN)$(NAME) has been created successfully!$(RESET)"
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	@echo -n "$(YELLOW)Compiling $<...$(RESET)"
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(POSITION)$(GREEN)Compiled $< successfully!$(RESET)"
+	@echo "$(POSITION)$(GREEN)Compiled $(basename $<) successfully!$(RESET)"
 
 clean:
 	@$(RM) $(OBJS_DIR)
