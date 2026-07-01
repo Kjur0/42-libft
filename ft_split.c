@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/29 23:39:25 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/01 20:34:30 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 /** @brief free array of strings
  *
+ * @internal helper for ft_split()
  * @param arr	array to be destroyed
  * @param len	lenght of array
  * @return		`nullptr`
@@ -36,6 +37,7 @@ static char	**ft_free_arr(char **arr, size_t len)
 
 /** @brief counts words in a string (delimited)
  *
+ * @internal helper for ft_split()
  * @param str	string
  * @param c		delimiter
  * @return		number of words
@@ -62,6 +64,7 @@ static size_t	ft_count_words(const char *str, char c)
 
 /** @brief duplicate the first word
  *
+ * @internal helper for ft_split()
  * @param str	string
  * @param c		delimiter
  * @return		word
