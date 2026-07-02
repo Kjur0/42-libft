@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/07/01 20:34:15 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/02 18:58:05 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ static size_t	ft_count_digits(int n)
 	res = 0;
 	if (n < 0)
 	{
-		n = -(n + 1);
-		res++;
+		n /= -10;
+		res += 2;
 	}
-	if (n == 0)
-		return (res + 1);
+	else if (n == 0)
+		return (1);
 	while (n > 0)
 	{
 		res++;
