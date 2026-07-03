@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/21 14:06:46 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/03 20:17:15 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 /** @brief check for an alphanumeric character
  *
- * equivilent to:
+ * equivalent to:
  * ```c
  * ft_isalpha(c) || ft_isdigit(c)
  * ```
@@ -61,7 +61,7 @@ int		ft_isascii(int c);
  */
 int		ft_isprint(int c);
 
-//## char convertion
+//## char conversion
 /** @brief convert character to uppercase
  *
  * @note inputs are treated as `unsigned char` (except for `-1`)
@@ -227,7 +227,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  */
 void	*ft_calloc(size_t nmemb, size_t size);
 
-//## string convertion
+//## string conversion
 /** @brief convert a string to a number
  *
  * @warning errors are not detected
@@ -278,7 +278,7 @@ char	**ft_split(char const *s, char c);
  *
  * @param n		number to be converted
  * @return		string representing the number
- * @retval 0	convertion failed
+ * @retval 0	conversion failed
  */
 char	*ft_itoa(int n);
 /** @brief map a string

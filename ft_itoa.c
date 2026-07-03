@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/07/02 18:58:05 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/03 20:15:56 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static size_t	ft_count_digits(int n)
  *
  * @param n		number to be converted
  * @return		string representing the number
- * @retval 0	convertion failed
+ * @retval 0	conversion failed
  */
 char	*ft_itoa(int n)
 {

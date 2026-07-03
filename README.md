@@ -47,7 +47,7 @@ AI summaries were used to summarize extensive documentations/references (for eas
 
 #### GitHub Copilot (via VS Code)
 
-AI inline suggestions were used for repetative tasks, such as:
+AI inline suggestions were used for repetitive tasks, such as:
 * Writing doxygen docs in `libft.h`
 * Creating `Makefile`
 
@@ -85,7 +85,7 @@ Functions from `libc` that are most commonly needed during **42 curriculum**
 * [`ft_isascii`](ft_isascii.c) - check is the character in ASCII range
 * [`ft_isprint`](ft_isprint.c) - check is the character printable (non-control)
 
-#### character convering functions
+#### character converting functions
 
 * [`ft_tolower`](ft_tolower.c) - convert character to uppercase
 * [`ft_toupper`](ft_toupper.c) - convert character to lowercase

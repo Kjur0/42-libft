@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/07/01 20:34:30 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/03 20:16:32 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  *
  * @internal helper for ft_split()
  * @param arr	array to be destroyed
- * @param len	lenght of array
+ * @param len	length of array
  * @return		`nullptr`
  */
 static char	**ft_free_arr(char **arr, size_t len)

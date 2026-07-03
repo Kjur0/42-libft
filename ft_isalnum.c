@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:28:21 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/06/25 17:41:13 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/07/03 20:15:36 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 /** @brief check for an alphanumeric character
  *
- * equivilent to:
+ * equivalent to:
  * ```c
  * ft_isalpha(c) || ft_isdigit(c)
  * ```
