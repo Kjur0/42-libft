@@ -30,7 +30,8 @@ See [Detailed description](#detailed-description) for list of implemented functi
 
 The library is tested with a custom test suite found in `/test`
 
-Most tests for parts 1-3 are taken from [my `libft` tester](https://github.com/Kjur0/42-libft-test).
+Most tests for parts 1-3 are taken from [my `libft` tester](https://github.com/Kjur0/42-libft-test).  
+`ft_printf` is tested with [my `ft_printf` tester](https://github.com/Kjur0/42-ft_printf-test).
 
 ## Instructions
 
@@ -190,6 +191,8 @@ A basic MACROS (`FD_STDIN`, `FD_STDOUT`, `FD_STDERR`) have been created.
 
 > [!NOTE]
 > Due to complexity required by `ft_printf` it does not follow the standard of 1 file/function
+
+`ft_printf` has been adapted from [my `ft_printf` implementation](https://github.com/Kjur0/42-ft_printf) and modified to fit the `libft` library.
 
 ### linked list ([`ft_lst.h`](include/ft_lst.h))
 

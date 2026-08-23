@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/08/23 05:13:32 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/08/23 05:21:46 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,16 @@ SRCS		=	ft_char/ft_isalnum.c \
 				ft_io/ft_putstr_fd.c \
 				ft_io/ft_putendl_fd.c \
 				ft_io/ft_putnbr_fd.c \
+				ft_printf/ft_printf.c \
+				ft_printf/ft_printf_utils.c \
+				ft_printf/ft_printf_flags.c \
+				ft_printf/ft_printf_c.c \
+				ft_printf/ft_printf_s.c \
+				ft_printf/ft_printf_p.c \
+				ft_printf/ft_printf_di.c \
+				ft_printf/ft_printf_u.c \
+				ft_printf/ft_printf_x.c \
+				ft_printf/ft_eprintf.c \
 				ft_lst/ft_lstnew.c \
 				ft_lst/ft_lstadd_front.c \
 				ft_lst/ft_lstadd_back.c \

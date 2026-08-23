@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_c.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 13:36:29 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/08/23 05:19:24 by kjurkows         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf_utils.h"
+
+/** @brief print character
+ *
+ * add character to linked list handling all necessary flags
+ *
+ * Supported flags:
+ * * `-`
+ * * `<width>`
+ *
+ * @see ft_putfmt()
+ * @see t_printf_flags
+ *
+ * @internal handler for `%c`
+ * @param c		character to print
+ * @param lst	pointer to linked list
+ * @param f		flags for printing
+ */
+void	ft_printf_c(char c, t_list **lst, t_printf_flags *f)
+{
+	if (f->align_left)
+		ft_lst_char(lst, c);
+	while (f->min_width-- > 1)
+		ft_lst_char(lst, ' ');
+	if (!f->align_left)
+		ft_lst_char(lst, c);
+}
