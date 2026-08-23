@@ -8,7 +8,8 @@
 
 Extra features:
 * `ft_printf` & `ft_eprintf`
-* Better types (like `bool`)
+* Better typing (like using `bool`)
+* More functions (`ft_memrchr`, all char classification, most math functions, quicksort & binarysearch)
 
 > [!NOTE]
 > The header was split into multiple smaller one (the `libft.h` is kept for compatibility)  
@@ -215,3 +216,23 @@ typedef struct s_list
 * [`ft_lstclear`](src/ft_lst/ft_lstclear.c) - delete a list
 * [`ft_lstiter`](src/ft_lst/ft_lstiter.c) - iterate over a list
 * [`ft_lstmap`](src/ft_lst/ft_lstmap.c) - map a list
+
+### integer math ([`ft_math.h`](include/ft_math.h))
+
+* [`ft_abs`](src/ft_math/ft_abs.c) - absolute value
+* [`ft_max`](src/ft_math/ft_max.c) - maximum value
+* [`ft_min`](src/ft_math/ft_min.c) - minimum value
+* [`ft_clamp`](src/ft_math/ft_clamp.c) - clamped value
+* [`ft_pow`](src/ft_math/ft_pow.c) - power function
+* [`ft_sqrt`](src/ft_math/ft_sqrt.c) - square root function
+
+### floating point math ([`ft_math.h`](include/ft_math.h))
+
+* [`ft_fabs`](src/ft_math/ft_fabs.c) - absolute value
+* [`ft_fmax`](src/ft_math/ft_fmax.c) - maximum value
+* [`ft_fmin`](src/ft_math/ft_fmin.c) - minimum value
+* [`ft_fclamp`](src/ft_math/ft_fclamp.c) - clamped value
+* [`ft_fpow`](src/ft_math/ft_fpow.c) - power function
+* [`ft_ceil`](src/ft_math/ft_ceil.c) - round up
+* [`ft_floor`](src/ft_math/ft_floor.c) - round down
+* [`ft_round`](src/ft_math/ft_round.c) - round to nearest integer

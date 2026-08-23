@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/08/23 04:29:24 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/08/23 05:13:32 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,21 @@ SRCS		=	ft_char/ft_isalnum.c \
 				ft_lst/ft_lstdelone.c \
 				ft_lst/ft_lstclear.c \
 				ft_lst/ft_lstiter.c \
-				ft_lst/ft_lstmap.c
+				ft_lst/ft_lstmap.c \
+				ft_math/ft_abs.c \
+				ft_math/ft_max.c \
+				ft_math/ft_min.c \
+				ft_math/ft_clamp.c \
+				ft_math/ft_pow.c \
+				ft_math/ft_sqrt.c \
+				ft_math/ft_fabs.c \
+				ft_math/ft_fmax.c \
+				ft_math/ft_fmin.c \
+				ft_math/ft_fclamp.c \
+				ft_math/ft_fpow.c \
+				ft_math/ft_ceil.c \
+				ft_math/ft_floor.c \
+				ft_math/ft_round.c
 
 OBJS_DIR	=	build
 OBJS		=	$(SRCS:%.c=$(OBJS_DIR)/%.o)
@@ -115,6 +129,7 @@ $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)/ft_io
 	@mkdir -p $(OBJS_DIR)/ft_lst
 	@mkdir -p $(OBJS_DIR)/ft_printf
+	@mkdir -p $(OBJS_DIR)/ft_math
 	@echo "$(CYAN)Created objects directory.$(RESET)"
 
 re: fclean all
