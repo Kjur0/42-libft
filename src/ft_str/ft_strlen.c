@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/15 20:39:46 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <ft_str.h>
+//## string examination
+
+/** @brief calculate string length
+ *
+ * count characters up to first `NUL`-terminator (`'\0'`)
+ *
+ * @param s	string being array of `char`
+ * @return	length of a string
+ */
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	if (!s)
+		return (0);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}

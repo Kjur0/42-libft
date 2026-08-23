@@ -1,0 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <ft_str.h>
+//## numeric convertion
+
+//import `malloc`
+#include <malloc.h>
+
+/** @brief count number of digits in a number
+ *
+ * @internal helper for ft_itoa()
+ * @param n	number
+ * @return	number of digits
+ */
+static size_t	ft_count_digits(int n)
+{
+	size_t	res;
+
+	res = 0;
+	if (n < 0)
+	{
+		n /= -10;
+		res += 2;
+	}
+	else if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		res++;
+		n /= 10;
+	}
+	return (res);
+}
+
+/**
+ * @brief convert number to string
+ *
+ * @param n		number to be converted
+ * @return		string representing the number
+ * @retval 0	conversion failed
+ */
+char	*ft_itoa(int n)
+{
+	size_t		len;
+	char		*out;
+	const int	sign = n < 0;
+
+	len = ft_count_digits(n);
+	out = malloc(len + 1);
+	if (!out)
+		return (0);
+	out[len--] = 0;
+	while (len - sign + 1 > 0)
+	{
+		if (n > 0)
+			out[len--] = '0' + n % 10;
+		else
+			out[len--] = '0' - n % 10;
+		n /= 10;
+	}
+	if (sign)
+		out[len] = '-';
+	return (out);
+}

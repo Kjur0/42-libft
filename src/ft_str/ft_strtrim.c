@@ -1,0 +1,66 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <ft_str.h>
+//## string manipulation
+
+//import `malloc`
+#include <malloc.h>
+
+/** @brief checks if string contains a char
+ *
+ * @internal helper for ft_strtrim()
+ * @param str	string
+ * @param c		character
+ * @retval 0	`false`
+ * @retval 1	`true`
+ */
+static int	ft_strcontains(const char *str, char c)
+{
+	while (*str)
+		if (*str++ == c)
+			return (1);
+	return (0);
+}
+
+/** @brief trim a string
+ *
+ * @param s1	string to trim
+ * @param set	set of characters to be removed
+ * @return		new trimmed string
+ * @retval 0	trimming failed
+*/
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	len;
+	char	*str;
+
+	if (!s1)
+		return (0);
+	if (!set)
+		return (ft_strdup(s1));
+	while (*s1 && ft_strcontains(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	if (len == 0)
+	{
+		str = malloc(1);
+		*str = 0;
+		return (str);
+	}
+	while (len + 1 > 0 && ft_strcontains(set, s1[len - 1]))
+		len--;
+	str = malloc(len + 1);
+	if (str)
+		ft_strlcpy(str, s1, len + 1);
+	return (str);
+}
