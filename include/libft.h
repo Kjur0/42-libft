@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 03:56:26 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/08/23 04:30:21 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@
 # include <ft_str.h>
 
 //## memory manipulation
-#include <ft_mem.h>
+# include <ft_mem.h>
 
 //## I/O
-#include <ft_io.h>
+# include <ft_io.h>
 
 //## linked list
-#include <ft_lst.h>
+# include <ft_lst.h>
 
 #endif
