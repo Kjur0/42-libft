@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/08/23 05:21:46 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/08/24 18:47:36 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS		=	ft_char/ft_isalnum.c \
 				ft_str/ft_strrchr.c \
 				ft_str/ft_strnstr.c \
 				ft_str/ft_atoi.c \
+				ft_str/ft_atol.c \
 				ft_str/ft_itoa.c \
 				ft_mem/ft_calloc.c \
 				ft_mem/ft_memchr.c \

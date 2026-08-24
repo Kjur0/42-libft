@@ -9,7 +9,7 @@
 Extra features:
 * `ft_printf` & `ft_eprintf`
 * Better typing (like using `bool`)
-* More functions (`ft_memrchr`, all char classification, most math functions, quicksort & binarysearch)
+* More functions (`ft_memrchr`, all char classification, most math functions)
 
 > [!NOTE]
 > The header was split into multiple smaller one (the `libft.h` is kept for compatibility)  
@@ -132,7 +132,7 @@ For detailed descriptions look inside [`libf.h`](include/libft.h) or specific fi
 * [`ft_isspace`](src/ft_char/ft_isspace.c) - checks for whitespace character
 * [`ft_isblank`](src/ft_char/ft_isblank.c) - check for a blank character
 * [`ft_isprint`](src/ft_char/ft_isprint.c) - check is the character printable (non-control)
-* [`ft_ispunct`](src/ft_char/ft_ispunct.c) - check for punctaation
+* [`ft_ispunct`](src/ft_char/ft_ispunct.c) - check for punctuation
 * [`ft_isascii`](src/ft_char/ft_isascii.c) - check is the character in ASCII range
 
 #### character manipulation ([`ft_char.h`](include/ft_char.h))
@@ -160,9 +160,10 @@ For detailed descriptions look inside [`libf.h`](include/libft.h) or specific fi
 * [`ft_strrchr`](src/ft_str/ft_strrchr.c) - locate character in a string (reverse)
 * [`ft_strnstr`](src/ft_str/ft_strnstr.c) - locate a substring in a string
 
-#### numeric convertion ([`ft_str.h`](include/ft_str.h))
+#### numeric conversion ([`ft_str.h`](include/ft_str.h))
 
-* [`ft_atoi`](src/ft_str/ft_atoi.c) - convert string to a number
+* [`ft_atoi`](src/ft_str/ft_atoi.c) - convert string to a number (`int`)
+* [`ft_atol`](src/ft_str/ft_atol.c) - convert string to a number (`long`)
 * [`ft_itoa`](src/ft_str/ft_itoa.c) - convert number to string
 
 #### memory manipulation ([`ft_mem.h`](include/ft_mem.h))
