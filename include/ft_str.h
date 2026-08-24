@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 02:44:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 03:51:43 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/08/24 16:16:02 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * @return		number
  */
 int		ft_atoi(const char *nptr);
+/** @brief convert a string to a number
+ *
+ * @warning errors are not detected
+ *
+ * @param nptr	string
+ * @return		number
+ */
+long	ft_atol(const char *nptr);
 
 /**
  * @brief convert number to string
