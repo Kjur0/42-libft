@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:13:17 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ static size_t	ft_count_words(const char *str, char c)
 /** @brief duplicate the first word
  *
  * @internal helper for ft_split()
- * @param str	string
- * @param c		delimiter
- * @return		word
- * @retval 0	action failed
+ * @param str		string
+ * @param c			delimiter
+ * @return			word
+ * @retval `NULL`	action failed
  */
 static char	*ft_word_dup(const char *str, char c)
 {
@@ -93,10 +93,10 @@ static char	*ft_word_dup(const char *str, char c)
 
 /** @brief split a string
  *
- * @param s		string to split
- * @param c		delimiter
- * @return		`NUL`-terminated array of strings
- * @retval 0	spliting failed
+ * @param s			string to split
+ * @param c			delimiter
+ * @return			`NUL`-terminated array of strings
+ * @retval `NULL`	spliting failed
 */
 char	**ft_split(char const *s, char c)
 {
@@ -108,7 +108,7 @@ char	**ft_split(char const *s, char c)
 	if (s)
 		arr = malloc(sizeof(char *) * (words + 1));
 	if (!s || !arr)
-		return (0);
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])

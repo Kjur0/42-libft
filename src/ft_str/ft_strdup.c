@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 17:47:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:37:55 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 /** @brief duplicate a string
  *
- * @param s		string to duplicate
- * @return		duplicated string
- * @retval 0	duplication failed
+ * @param s			string to duplicate
+ * @return			duplicated string
+ * @retval `NULL`	duplication failed
  */
 char	*ft_strdup(const char *s)
 {

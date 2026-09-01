@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:25:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:36:53 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <ft_char.h>
 
-/** @brief convert a string to a number
+/** @brief convert a string to a number (`int`)
  *
  * @warning errors are not detected
  *
@@ -24,8 +24,8 @@
  */
 int	ft_atoi(const char *nptr)
 {
-	unsigned long long	n;
-	signed int			sign;
+	unsigned int	n;
+	signed int		sign;
 
 	if (!nptr)
 		return (0);
@@ -43,10 +43,6 @@ int	ft_atoi(const char *nptr)
 	while (ft_isdigit(*nptr))
 	{
 		n = 10 * n + (*nptr++ - '0');
-		if (n > 9223372036854775807ULL && sign == 1)
-			return (-1);
-		if (n > 9223372036854775808ULL && sign == -1)
-			return (0);
 	}
 	return (sign * n);
 }

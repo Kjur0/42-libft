@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_striteri_tests.cpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:35:59 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/09/01 21:41:25 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/09/01 21:45:51 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <tests.hpp>
 
-//## char classification
-//## char manipulation
-# include <ft_char.h>
+TEST(ft_str, ft_striteri)
+{
+	char	str[20] = "Hello my awesome 42";
 
-//## string manipulation
-//## string examination
-//## numeric convertion
-# include <ft_str.h>
-
-//## memory manipulation
-# include <ft_mem.h>
-
-//## I/O
-# include <ft_io.h>
-
-//## linked list
-# include <ft_lst.h>
-
-#endif
+	ft_striteri(str, [](size_t i, char *c){
+		*c = i + 'a';
+	});
+	EXPECT_STREQ(str, "abcdefghijklmnopqrs");
+}

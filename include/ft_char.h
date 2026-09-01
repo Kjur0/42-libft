@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 02:07:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:09:51 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:28:27 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ bool	ft_isalnum(char c);
  */
 bool	ft_isalpha(char c);
 /** @brief check for a lowercase letter
- * 
+ *
  * @param c	character to check
  */
 bool	ft_islower(char c);
 /** @brief check for an uppercase letter
- * 
+ *
  * @param c	character to check
  */
 bool	ft_isupper(char c);
@@ -52,16 +52,16 @@ bool	ft_isdigit(char c);
  * @param c	character to check
  */
 bool	ft_isxdigit(char c);
-/** @brief check for a control character 
- * 
- * 
+/** @brief check for a control character
+ *
+ *
  * @param c	character to check
 */
 bool	ft_iscntrl(char c);
 /** @brief check for a graphical symbol
- * 
+ *
  * any printable character except `' '` (space)
- * 
+ *
  * @param c	character to check
  */
 bool	ft_isgraph(char c);
@@ -73,7 +73,7 @@ bool	ft_isgraph(char c);
  */
 bool	ft_isspace(char c);
 /** @brief check for a blank character
- * 
+ *
  * blank character is `' '` (space) or `'\t'` (tab)
  */
 bool	ft_isblank(char c);
@@ -83,7 +83,7 @@ bool	ft_isblank(char c);
  */
 bool	ft_isprint(char c);
 /** @brief check for punctaation
- * 
+ *
  * @param c	character to check
  */
 bool	ft_ispunct(char c);
@@ -100,15 +100,11 @@ bool	ft_isascii(char c);
 
 /** @brief convert character to uppercase
  *
- * @note inputs are treated as `unsigned char` (except for `-1`)
- *
  * @param c	lowercase character
  * @return	uppercase character
  */
 char	ft_toupper(char c);
 /** @brief convert character to lowercase
- *
- * @note inputs are treated as `unsigned char` (except for `-1`)
  *
  * @param c	uppercase character
  * @return	lowercase character

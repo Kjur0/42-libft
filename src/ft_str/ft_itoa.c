@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:14:16 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 	len = ft_count_digits(n);
 	out = malloc(len + 1);
 	if (!out)
-		return (0);
+		return (NULL);
 	out[len--] = 0;
 	while (len - sign + 1 > 0)
 	{

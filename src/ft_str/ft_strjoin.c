@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:50:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 /** @brief join two strings into a new one
  *
- * @param s1	first string
- * @param s2	second string
- * @return		new string
- * @retval 0	joining failed
+ * @param s1		first string
+ * @param s2		second string
+ * @return			new string
+ * @retval `NULL`	joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s1));
 	str = malloc(len1 + len2 + 1);
 	if (!str)
-		return (str);
+		return (NULL);
 	i = 0;
 	while (i < len1)
 	{

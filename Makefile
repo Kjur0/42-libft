@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/08/25 03:16:44 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/01 21:49:43 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,7 +119,15 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_char/ft_isupper_tests.cpp \
 					ft_char/ft_isxdigit_tests.cpp \
 					ft_char/ft_tolower_tests.cpp \
-					ft_char/ft_toupper_tests.cpp
+					ft_char/ft_toupper_tests.cpp \
+					ft_str/ft_atoi_tests.cpp \
+					ft_str/ft_atol_tests.cpp \
+					ft_str/ft_itoa_tests.cpp \
+					ft_str/ft_split_tests.cpp \
+					ft_str/ft_strchr_tests.cpp \
+					ft_str/ft_strdup_tests.cpp \
+					ft_str/ft_striteri_tests.cpp \
+					ft_str/ft_strjoin_tests.cpp \
 
 OBJS_DIR		=	build
 OBJS			=	$(SRCS:%.c=$(OBJS_DIR)/%.o)
@@ -210,7 +218,8 @@ $(DEBUG_OBJS_DIR):
 $(TEST_OBJS_DIR):
 	@mkdir -p $(TEST_OBJS_DIR)
 	@mkdir -p $(TEST_OBJS_DIR)/ft_char
-	@echo "$(CYAN)Created test objects directory.$(RESET)"	
+	@mkdir -p $(TEST_OBJS_DIR)/ft_str
+	@echo "$(CYAN)Created test objects directory.$(RESET)"
 
 re: fclean all
 	@echo "$(GREEN)Rebuild complete!$(RESET)"
@@ -218,5 +227,7 @@ re: fclean all
 test: $(TEST_BIN)
 	@echo "$(GREEN)Running tests...$(RESET)"
 	@./$(TEST_BIN)
+
+retest: fclean test
 
 .PHONY: all clean fclean re test

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 02:44:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/24 16:16:02 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/01 21:49:39 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /** @brief duplicate a string
  *
- * @param s		string to duplicate
- * @return		duplicated string
- * @retval 0	duplication failed
+ * @param s			string to duplicate
+ * @return			duplicated string
+ * @retval `NULL`	duplication failed
  */
 char	*ft_strdup(const char *s);
 
@@ -60,10 +60,10 @@ char	*ft_substr(char const *s, size_t start, size_t len);
 
 /** @brief join two strings into a new one
  *
- * @param s1	first string
- * @param s2	second string
- * @return		new string
- * @retval 0	joining failed
+ * @param s1		first string
+ * @param s2		second string
+ * @return			new string
+ * @retval `NULL`	joining failed
  */
 char	*ft_strjoin(char const *s1, char const *s2);
 
@@ -78,10 +78,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 /** @brief split a string
  *
- * @param s		string to split
- * @param c		delimiter
- * @return		`NUL`-terminated array of strings
- * @retval 0	spliting failed
+ * @param s			string to split
+ * @param c			delimiter
+ * @return			`NUL`-terminated array of strings
+ * @retval `NULL`	spliting failed
 */
 char	**ft_split(char const *s, char c);
 
@@ -128,19 +128,15 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  *
  * first occurrence
  *
- * @note inputs are treated as `unsigned char`
- *
- * @param s		string
- * @param c		char to locate
- * @return		pointer to first occurrence
- * @retval 0	character not found
+ * @param s			string
+ * @param c			char to locate
+ * @return			pointer to first occurrence
+ * @retval `NULL`	character not found
 */
 char	*ft_strchr(const char *s, char c);
 /** @brief locate character in a string (reverse)
  *
  * last occurrence
- *
- * @note inputs are treated as `unsigned char`
  *
  * @param s		string
  * @param c		char to locate
@@ -161,7 +157,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 //## numeric convertion
 
-/** @brief convert a string to a number
+/** @brief convert a string to a number (`int`)
  *
  * @warning errors are not detected
  *
@@ -169,7 +165,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * @return		number
  */
 int		ft_atoi(const char *nptr);
-/** @brief convert a string to a number
+/** @brief convert a string to a number (`long`)
  *
  * @warning errors are not detected
  *

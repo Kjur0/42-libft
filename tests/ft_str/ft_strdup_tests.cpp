@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup_tests.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:35:59 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/09/01 21:38:27 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/09/01 21:39:50 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <tests.hpp>
 
-//## char classification
-//## char manipulation
-# include <ft_char.h>
+TEST(ft_str, ft_strdup)
+{
+	char *str;
 
-//## string manipulation
-//## string examination
-//## numeric convertion
-# include <ft_str.h>
+	str = ft_strdup("Hello");
+	ASSERT_NE(str, nullptr);
+	EXPECT_STREQ(str, "Hello");
+	free(str);
 
-//## memory manipulation
-# include <ft_mem.h>
-
-//## I/O
-# include <ft_io.h>
-
-//## linked list
-# include <ft_lst.h>
-
-#endif
+	str = ft_strdup(nullptr);
+	EXPECT_EQ(str, nullptr);
+}
