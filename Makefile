@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/02 17:20:19 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/02 17:45:12 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,7 +107,6 @@ SRCS			=	ft_char/ft_isalnum.c \
 TEST_SRCS_DIR	=	tests
 TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_char/ft_isalpha_tests.cpp \
-					ft_char/ft_isascii_tests.cpp \
 					ft_char/ft_isblank_tests.cpp \
 					ft_char/ft_iscntrl_tests.cpp \
 					ft_char/ft_isdigit_tests.cpp \
@@ -118,19 +117,18 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_char/ft_isspace_tests.cpp \
 					ft_char/ft_isupper_tests.cpp \
 					ft_char/ft_isxdigit_tests.cpp \
-					ft_char/ft_tolower_tests.cpp \
+					ft_char/ft_isascii_tests.cpp \
 					ft_char/ft_toupper_tests.cpp \
+					ft_char/ft_tolower_tests.cpp \
+					ft_str/ft_strdup_tests.cpp \
+					ft_str/ft_strjoin_tests.cpp \
+					ft_str/ft_split_tests.cpp \
+					ft_str/ft_striteri_tests.cpp \
+					ft_str/ft_strlen_tests.cpp \
+					ft_str/ft_strchr_tests.cpp \
 					ft_str/ft_atoi_tests.cpp \
 					ft_str/ft_atol_tests.cpp \
 					ft_str/ft_itoa_tests.cpp \
-					ft_str/ft_split_tests.cpp \
-					ft_str/ft_strchr_tests.cpp \
-					ft_str/ft_strdup_tests.cpp \
-					ft_str/ft_striteri_tests.cpp \
-					ft_str/ft_strjoin_tests.cpp \
-					ft_str/ft_strlen_tests.cpp \
-					#ft_str/ft_strlcat_tests.cpp \
-					ft_str/ft_strlcpy_tests.cpp \
 
 OBJS_DIR		=	build
 OBJS			=	$(SRCS:%.c=$(OBJS_DIR)/%.o)

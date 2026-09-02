@@ -6,14 +6,12 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 03:32:22 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 20:47:52 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:46:43 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_IO_H
 # define FT_IO_H
-
-# include <ft_printf.h>
 
 //## I/O
 

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 20:23:13 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:35:59 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:46:54 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@
 
 //## linked list
 # include <ft_lst.h>
+
+//## printf
+# include <ft_printf.h>
 
 #endif
