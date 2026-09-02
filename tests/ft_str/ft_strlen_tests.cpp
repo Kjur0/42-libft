@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen_tests.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 20:34:45 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/02 17:27:05 by kjurkows         ###   ########.fr       */
+/*   Created: 2026/09/02 17:15:53 by kjurkows          #+#    #+#             */
+/*   Updated: 2026/09/02 17:19:10 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_char.h>
-//## char classification
+#include <tests.hpp>
 
-/** @brief check is the character in ASCII range
- *
- * checks if value is between `0` and `127` (7-bit unsigned integer)
- *
- * @param c		character to check
- */
-bool	ft_isascii(char c)
+TEST(ft_str, ft_strlen)
 {
-	return (c >= 0x00 && (const unsigned char)c <= 0x7F);
+	EXPECT_EQ(ft_strlen(""), 0);
+	EXPECT_EQ(ft_strlen(nullptr), 0);
+	EXPECT_EQ(ft_strlen("123456789"), 9);
+	EXPECT_EQ(ft_strlen("SOME RANDOM STRING WITH A RANDOM LENGTH"), 39);
 }

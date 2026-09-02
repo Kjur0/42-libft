@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:55:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:31:43 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	if (size > 0)
-		dst[i] = 0;
+		dst[i] = '\0';
 	return (src_len);
 }

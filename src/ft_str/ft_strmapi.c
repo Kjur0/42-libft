@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 21:06:35 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:24:50 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 /** @brief map a string
  *
- * @param s		string to map
- * @param f		function used for mapping
- * @return		new string
- * @retval 0	mapping failed
+ * @param s			string to map
+ * @param f			function used for mapping
+ * @return			new string
+ * @retval `NULL`	mapping failed
  */
 char	*ft_strmapi(char const *s, char (*f)(size_t, char))
 {
@@ -30,10 +30,10 @@ char	*ft_strmapi(char const *s, char (*f)(size_t, char))
 	char			*str;
 
 	if (!s || !f)
-		return (0);
+		return (NULL);
 	str = malloc(len + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{

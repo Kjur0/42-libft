@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 02:44:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:49:39 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:35:20 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return 		ft_strlen(src) + min(size, ft_strlen(dst))`
+ * @return 		`ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** @brief safely concatenate two strings
@@ -50,11 +50,11 @@ char	*ft_strdup(const char *s);
 
 /** @brief create a substring from a string
  *
- * @param s		original string
- * @param start	starting index of the substring
- * @param len	max length of a the substring
- * @return		created substring
- * @retval 0	creation failed
+ * @param s			original string
+ * @param start		starting index of the substring
+ * @param len		max length of a the substring
+ * @return			created substring
+ * @retval `NULL`	creation failed
  */
 char	*ft_substr(char const *s, size_t start, size_t len);
 
@@ -69,10 +69,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 
 /** @brief trim a string
  *
- * @param s1	string to trim
- * @param set	set of characters to be removed
- * @return		new trimmed string
- * @retval 0	trimming failed
+ * @param s1		string to trim
+ * @param set		set of characters to be removed
+ * @return			new trimmed string
+ * @retval `NULL`	trimming failed
 */
 char	*ft_strtrim(char const *s1, char const *set);
 
@@ -87,10 +87,10 @@ char	**ft_split(char const *s, char c);
 
 /** @brief map a string
  *
- * @param s		string to map
- * @param f		function used for mapping
- * @return		new string
- * @retval 0	mapping failed
+ * @param s			string to map
+ * @param f			function used for mapping
+ * @return			new string
+ * @retval `NULL`	mapping failed
  */
 char	*ft_strmapi(char const *s, char (*f)(size_t, char));
 /** @brief iterate over a string
@@ -138,10 +138,10 @@ char	*ft_strchr(const char *s, char c);
  *
  * last occurrence
  *
- * @param s		string
- * @param c		char to locate
- * @return		pointer to last occurrence
- * @retval 0	character not found
+ * @param s			string
+ * @param c			char to locate
+ * @return			pointer to last occurrence
+ * @retval `NULL`	character not found
  */
 char	*ft_strrchr(const char *s, char c);
 
@@ -151,7 +151,7 @@ char	*ft_strrchr(const char *s, char c);
  * @param little	string to search for
  * @param len		max length for searching
  * @return			pointer to substring
- * @retval 0		substring not located
+ * @retval `NULL`	substring not located
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
@@ -177,9 +177,9 @@ long	ft_atol(const char *nptr);
 /**
  * @brief convert number to string
  *
- * @param n		number to be converted
- * @return		string representing the number
- * @retval 0	conversion failed
+ * @param n			number to be converted
+ * @return			string representing the number
+ * @retval `NULL`	conversion failed
  */
 char	*ft_itoa(int n);
 

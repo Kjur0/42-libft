@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/01 21:49:43 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/02 17:20:19 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,6 +128,9 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_str/ft_strdup_tests.cpp \
 					ft_str/ft_striteri_tests.cpp \
 					ft_str/ft_strjoin_tests.cpp \
+					ft_str/ft_strlen_tests.cpp \
+					#ft_str/ft_strlcat_tests.cpp \
+					ft_str/ft_strlcpy_tests.cpp \
 
 OBJS_DIR		=	build
 OBJS			=	$(SRCS:%.c=$(OBJS_DIR)/%.o)

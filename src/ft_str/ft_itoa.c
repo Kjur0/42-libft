@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:51:09 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:14:16 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:35:15 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ static size_t	ft_count_digits(int n)
 /**
  * @brief convert number to string
  *
- * @param n		number to be converted
- * @return		string representing the number
- * @retval 0	conversion failed
+ * @param n			number to be converted
+ * @return			string representing the number
+ * @retval `NULL`	conversion failed
  */
 char	*ft_itoa(int n)
 {
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	out = malloc(len + 1);
 	if (!out)
 		return (NULL);
-	out[len--] = 0;
+	out[len--] = '\0';
 	while (len - sign + 1 > 0)
 	{
 		if (n > 0)

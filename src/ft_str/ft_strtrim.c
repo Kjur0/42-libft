@@ -6,13 +6,14 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:37:58 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:32:18 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_str.h>
 //## string manipulation
 
+#include <stdbool.h>
 //import `malloc`
 #include <malloc.h>
 
@@ -21,23 +22,22 @@
  * @internal helper for ft_strtrim()
  * @param str	string
  * @param c		character
- * @retval 0	`false`
- * @retval 1	`true`
+ * @return		`true` or `false`
  */
-static int	ft_strcontains(const char *str, char c)
+static bool	ft_strcontains(const char *str, char c)
 {
 	while (*str)
 		if (*str++ == c)
-			return (1);
-	return (0);
+			return (true);
+	return (false);
 }
 
 /** @brief trim a string
  *
- * @param s1	string to trim
- * @param set	set of characters to be removed
- * @return		new trimmed string
- * @retval 0	trimming failed
+ * @param s1		string to trim
+ * @param set		set of characters to be removed
+ * @return			new trimmed string
+ * @retval `NULL`	trimming failed
 */
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -45,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	if (!s1)
-		return (0);
+		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
 	while (*s1 && ft_strcontains(set, *s1))
@@ -54,7 +54,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (len == 0)
 	{
 		str = malloc(1);
-		*str = 0;
+		*str = '\0';
 		return (str);
 	}
 	while (len + 1 > 0 && ft_strcontains(set, s1[len - 1]))

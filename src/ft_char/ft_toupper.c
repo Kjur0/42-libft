@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:09:23 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:37:34 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:27:42 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
  */
 char	ft_toupper(char c)
 {
-	if (c == -1)
-		return (c);
 	if (c >= 'a' && c <= 'z')
 		return (c - 'a' + 'A');
 	return (c);

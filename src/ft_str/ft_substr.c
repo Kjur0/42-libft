@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:19:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:10:54 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:33:06 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 
 /** @brief create a substring from a string
  *
- * @param s		original string
- * @param start	starting index of the substring
- * @param len	max length of a the substring
- * @return		created substring
- * @retval 0	creation failed
+ * @param s			original string
+ * @param start		starting index of the substring
+ * @param len		max length of a the substring
+ * @return			created substring
+ * @retval `NULL`	creation failed
  */
 char	*ft_substr(char const *s, size_t start, size_t len)
 {
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	char	*str;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	size = ft_strlen(s);
 	if (start >= size)
 		size = start;
@@ -39,15 +39,14 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	if (size > len)
 		size = len;
 	str = malloc(sizeof(char) * (size + 1));
-	if (str)
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < size)
 	{
-		i = 0;
-		while (i < size)
-		{
-			str[i] = s[start + i];
-			i++;
-		}
-		str[i] = 0;
+		str[i] = s[start + i];
+		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

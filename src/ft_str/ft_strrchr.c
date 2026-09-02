@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 13:24:49 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:25:13 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
  *
  * @note inputs are treated as `unsigned char`
  *
- * @param s		string
- * @param c		char to locate
- * @return		pointer to last occurrence
- * @retval 0	character not found
+ * @param s			string
+ * @param c			char to locate
+ * @return			pointer to last occurrence
+ * @retval `NULL`	character not found
  */
 char	*ft_strrchr(const char *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 19:25:04 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:50:13 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:31:27 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (j < len2)
 		str[i++] = s2[j++];
-	str[i] = 0;
+	str[i] = '\0';
 	return (str);
 }

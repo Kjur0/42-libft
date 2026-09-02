@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 20:00:08 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/01 21:13:17 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:30:47 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	**ft_free_arr(char **arr, size_t len)
 	while (i < len)
 		free(arr[i++]);
 	free(arr);
-	return (0);
+	return (NULL);
 }
 
 /** @brief counts words in a string (delimited)
@@ -80,14 +80,14 @@ static char	*ft_word_dup(const char *str, char c)
 		len++;
 	dup = malloc(len + 1);
 	if (!dup)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
 		dup[i] = str[i];
 		i++;
 	}
-	dup[i] = 0;
+	dup[i] = '\0';
 	return (dup);
 }
 
@@ -123,6 +123,6 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	arr[j] = 0;
+	arr[j] = NULL;
 	return (arr);
 }

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 15:15:44 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/02 17:25:05 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * @param little	string to search for
  * @param len		max length for searching
  * @return			pointer to substring
- * @retval 0		substring not located
+ * @retval `NULL`	substring not located
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
