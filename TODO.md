@@ -40,8 +40,8 @@
 
 ## `ft_mem`
 
-- [ ] `ft_memset`
-- [ ] `ft_bzero`
+- [x] `ft_memset`
+- [x] `ft_bzero`
 - [ ] `ft_memcpy`
 - [ ] `ft_memmove`
 - [ ] `ft_memchr`

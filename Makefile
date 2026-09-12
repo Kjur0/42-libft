@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/12 13:44:41 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/12 13:52:31 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -135,6 +135,8 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_str/ft_atoi_tests.cpp \
 					ft_str/ft_atol_tests.cpp \
 					ft_str/ft_itoa_tests.cpp \
+					ft_mem/ft_memset_tests.cpp \
+					ft_mem/ft_bzero_tests.cpp \
 
 OBJS_DIR		=	build
 OBJS			=	$(SRCS:%.c=$(OBJS_DIR)/%.o)
@@ -226,6 +228,7 @@ $(TEST_OBJS_DIR):
 	@mkdir -p $(TEST_OBJS_DIR)
 	@mkdir -p $(TEST_OBJS_DIR)/ft_char
 	@mkdir -p $(TEST_OBJS_DIR)/ft_str
+	@mkdir -p $(TEST_OBJS_DIR)/ft_mem
 	@echo "$(CYAN)Created test objects directory.$(RESET)"
 
 re: fclean all
