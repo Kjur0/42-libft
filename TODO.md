@@ -23,17 +23,17 @@
 - [ ] `ft_strlcpy`
 - [ ] `ft_strlcat`
 - [x] `ft_strdup`
-- [ ] `ft_substr`
+- [x] `ft_substr`
 - [x] `ft_strjoin`
-- [ ] `ft_strtrim`
+- [x] `ft_strtrim`
 - [x] `ft_split`
-- [ ] `ft_strmapi`
+- [x] `ft_strmapi`
 - [x] `ft_striteri`
 - [x] `ft_strlen`
-- [ ] `ft_strncmp`
+- [x] `ft_strncmp`
 - [x] `ft_strchr`
-- [ ] `ft_strrchr`
-- [ ] `ft_strnstr`
+- [x] `ft_strrchr`
+- [x] `ft_strnstr`
 - [x] `ft_atoi`
 - [x] `ft_atol`
 - [x] `ft_itoa`

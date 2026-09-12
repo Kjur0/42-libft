@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/02 17:45:12 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/12 13:44:41 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,11 +121,17 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_char/ft_toupper_tests.cpp \
 					ft_char/ft_tolower_tests.cpp \
 					ft_str/ft_strdup_tests.cpp \
+					ft_str/ft_substr_tests.cpp \
 					ft_str/ft_strjoin_tests.cpp \
+					ft_str/ft_strtrim_tests.cpp \
 					ft_str/ft_split_tests.cpp \
+					ft_str/ft_strmapi_tests.cpp \
 					ft_str/ft_striteri_tests.cpp \
 					ft_str/ft_strlen_tests.cpp \
+					ft_str/ft_strncmp_tests.cpp \
 					ft_str/ft_strchr_tests.cpp \
+					ft_str/ft_strrchr_tests.cpp \
+					ft_str/ft_strnstr_tests.cpp \
 					ft_str/ft_atoi_tests.cpp \
 					ft_str/ft_atol_tests.cpp \
 					ft_str/ft_itoa_tests.cpp \
@@ -177,7 +183,7 @@ $(DEBUG_OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(DEBUG_OBJS_DIR)
 	@echo "$(POSITION)$(GREEN)Compiled debug $(basename $(notdir $<)) successfully!$(RESET)"
 
 $(TEST_OBJS_DIR)/%.o: $(TEST_SRCS_DIR)/%.cpp | $(TEST_OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling $(basename $(notdir $<))... $(RESET)"
+	@echo -n "$(YELLOW)Compiling test $(basename $(notdir $<))... $(RESET)"
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 	@echo "$(POSITION)$(GREEN)Compiled test $(basename $(notdir $<)) successfully!$(RESET)"
 
