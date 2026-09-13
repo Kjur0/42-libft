@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/12 13:52:31 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/13 16:00:58 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,6 +120,8 @@ TEST_SRCS		=	ft_char/ft_isalnum_tests.cpp \
 					ft_char/ft_isascii_tests.cpp \
 					ft_char/ft_toupper_tests.cpp \
 					ft_char/ft_tolower_tests.cpp \
+					ft_str/ft_strlcpy_tests.cpp \
+					ft_str/ft_strlcat_tests.cpp \
 					ft_str/ft_strdup_tests.cpp \
 					ft_str/ft_substr_tests.cpp \
 					ft_str/ft_strjoin_tests.cpp \
@@ -159,48 +161,48 @@ RESET			=	\033[0m
 POSITION		=	\033[2K\r
 
 all: $(NAME)
-	@echo "$(GREEN)$(NAME) is ready to use.$(RESET)"
+	@printf "$(GREEN)$(NAME) is ready to use.$(RESET)\n"
 
 debug: $(DEBUG_NAME)
-	@echo "$(GREEN)$(DEBUG_NAME) is ready to use.$(RESET)"
+	@printf "$(GREEN)$(DEBUG_NAME) is ready to use.$(RESET)\n"
 
 $(NAME): $(OBJS)
-	@echo -n "$(BLUE)Creating $(NAME)... $(RESET)"
+	@printf "$(BLUE)Creating $(NAME)... $(RESET)"
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-	@echo "$(POSITION)$(GREEN)$(NAME) has been created successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)$(NAME) has been created successfully!$(RESET)\n"
 
 $(DEBUG_NAME): $(DEBUG_OBJS)
-	@echo -n "$(BLUE)Creating $(DEBUG_NAME)... $(RESET)"
+	@printf "$(BLUE)Creating $(DEBUG_NAME)... $(RESET)"
 	@$(AR) $(ARFLAGS) $(DEBUG_NAME) $(DEBUG_OBJS)
-	@echo "$(POSITION)$(GREEN)$(DEBUG_NAME) has been created successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)$(DEBUG_NAME) has been created successfully!$(RESET)\n"
 
 $(TEST_BIN): $(TEST_OBJS) $(DEBUG_NAME)
-	@echo -n "$(BLUE)Linking $(TEST_BIN)... $(RESET)"
+	@printf "$(BLUE)Linking $(TEST_BIN)... $(RESET)"
 	@$(CXX) $(CFLAGS) $(TEST_OBJS) $(DEBUG_NAME) $(TESTFLAGS) -o $(TEST_BIN)
-	@echo "$(POSITION)$(GREEN)Linked $(TEST_BIN) successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)Linked $(TEST_BIN) successfully!$(RESET)\n"
 
 $(DEBUG_OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(DEBUG_OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling debug $(basename $(notdir $<))... $(RESET)"
+	@printf "$(YELLOW)Compiling debug $(basename $(notdir $<))... $(RESET)"
 	@$(CC) $(DEBUGFLAGS) -c $< -o $@
-	@echo "$(POSITION)$(GREEN)Compiled debug $(basename $(notdir $<)) successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)Compiled debug $(basename $(notdir $<)) successfully!$(RESET)\n"
 
 $(TEST_OBJS_DIR)/%.o: $(TEST_SRCS_DIR)/%.cpp | $(TEST_OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling test $(basename $(notdir $<))... $(RESET)"
+	@printf "$(YELLOW)Compiling test $(basename $(notdir $<))... $(RESET)"
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
-	@echo "$(POSITION)$(GREEN)Compiled test $(basename $(notdir $<)) successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)Compiled test $(basename $(notdir $<)) successfully!$(RESET)\n"
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c | $(OBJS_DIR)
-	@echo -n "$(YELLOW)Compiling $(basename $(notdir $<))... $(RESET)"
+	@printf "$(YELLOW)Compiling $(basename $(notdir $<))... $(RESET)"
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(POSITION)$(GREEN)Compiled $(basename $(notdir $<)) successfully!$(RESET)"
+	@printf "$(POSITION)$(GREEN)Compiled $(basename $(notdir $<)) successfully!$(RESET)\n"
 
 clean:
 	@$(RM) $(OBJS_DIR)
-	@echo "$(RED)Cleaned object files.$(RESET)"
+	@printf "$(RED)Cleaned object files.$(RESET)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(RED)Fully cleaned all generated files.$(RESET)"
+	@printf "$(RED)Fully cleaned all generated files.$(RESET)\n"
 
 $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)
@@ -211,7 +213,7 @@ $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)/ft_lst
 	@mkdir -p $(OBJS_DIR)/ft_printf
 	@mkdir -p $(OBJS_DIR)/ft_math
-	@echo "$(CYAN)Created objects directory.$(RESET)"
+	@printf "$(CYAN)Created objects directory.$(RESET)\n"
 
 $(DEBUG_OBJS_DIR):
 	@mkdir -p $(DEBUG_OBJS_DIR)
@@ -222,22 +224,22 @@ $(DEBUG_OBJS_DIR):
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_lst
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_printf
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_math
-	@echo "$(CYAN)Created debug objects directory.$(RESET)"
+	@printf "$(CYAN)Created debug objects directory.$(RESET)\n"
 
 $(TEST_OBJS_DIR):
 	@mkdir -p $(TEST_OBJS_DIR)
 	@mkdir -p $(TEST_OBJS_DIR)/ft_char
 	@mkdir -p $(TEST_OBJS_DIR)/ft_str
 	@mkdir -p $(TEST_OBJS_DIR)/ft_mem
-	@echo "$(CYAN)Created test objects directory.$(RESET)"
+	@printf "$(CYAN)Created test objects directory.$(RESET)\n"
 
 re: fclean all
-	@echo "$(GREEN)Rebuild complete!$(RESET)"
+	@printf "$(GREEN)Rebuild complete!$(RESET)\n"
 
 test: $(TEST_BIN)
-	@echo "$(GREEN)Running tests...$(RESET)"
+	@printf "$(GREEN)Running tests...$(RESET)\n"
 	@./$(TEST_BIN)
 
 retest: fclean test
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re test retest

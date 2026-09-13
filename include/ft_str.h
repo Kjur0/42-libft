@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 02:44:43 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/09/02 17:35:20 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/13 16:06:56 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return 		`ft_strlen(src) + min(size, ft_strlen(dst))`
+ * @return 		`ft_strlen(src)`
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 /** @brief safely concatenate two strings
@@ -36,7 +36,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return		`ft_strlen(src)`
+ * @return		`ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 

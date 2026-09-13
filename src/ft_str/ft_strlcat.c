@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 12:58:06 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 04:11:00 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/09/13 16:16:44 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param dst	pointer to destination
  * @param src	pointer to source
  * @param size	max size of the result
- * @return		`ft_strlen(src)`
+ * @return		`ft_strlen(src) + min(size, ft_strlen(dst))`
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t			i;
 
 	if (!dst)
-		return (0);
+		return (src_len);
 	dst_len = 0;
 	i = 0;
 	while (dst_len < size && dst[dst_len])

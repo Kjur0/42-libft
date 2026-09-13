@@ -20,7 +20,7 @@
 
 ## `ft_str`
 
-- [ ] `ft_strlcpy`
+- [x] `ft_strlcpy`
 - [ ] `ft_strlcat`
 - [x] `ft_strdup`
 - [x] `ft_substr`

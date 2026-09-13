@@ -47,6 +47,7 @@ To compile `libft` just use `make`
 > `fclean` : full clean (remove everything compiled)  
 > `re` : recompile and relink everything  
 > `test` : test the library
+> `retest` : recompile and relink everything then test the library
 
 ### Usage (inclusion & linking)
 
