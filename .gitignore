@@ -1,4 +1,5 @@
 build/
+out/
 libft.a
 libft_debug.a
 libft-test

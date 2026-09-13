@@ -6,7 +6,7 @@
 #    By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 20:06:21 by kjurkows          #+#    #+#              #
-#    Updated: 2026/09/13 16:00:58 by kjurkows         ###   ########.fr        #
+#    Updated: 2026/09/13 16:47:56 by kjurkows         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -215,7 +215,7 @@ $(OBJS_DIR):
 	@mkdir -p $(OBJS_DIR)/ft_math
 	@printf "$(CYAN)Created objects directory.$(RESET)\n"
 
-$(DEBUG_OBJS_DIR):
+$(DEBUG_OBJS_DIR): | $(OBJS_DIR)
 	@mkdir -p $(DEBUG_OBJS_DIR)
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_char
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_str
@@ -226,7 +226,7 @@ $(DEBUG_OBJS_DIR):
 	@mkdir -p $(DEBUG_OBJS_DIR)/ft_math
 	@printf "$(CYAN)Created debug objects directory.$(RESET)\n"
 
-$(TEST_OBJS_DIR):
+$(TEST_OBJS_DIR): | $(OBJS_DIR)
 	@mkdir -p $(TEST_OBJS_DIR)
 	@mkdir -p $(TEST_OBJS_DIR)/ft_char
 	@mkdir -p $(TEST_OBJS_DIR)/ft_str

@@ -21,7 +21,7 @@
 ## `ft_str`
 
 - [x] `ft_strlcpy`
-- [ ] `ft_strlcat`
+- [x] `ft_strlcat`
 - [x] `ft_strdup`
 - [x] `ft_substr`
 - [x] `ft_strjoin`
