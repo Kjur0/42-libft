@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 21:30:21 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 05:19:24 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:06:45 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
  */
 void	ft_lst_char(t_list **lst, char c)
 {
-	t_char	*cc;
+	char	*cc;
 
-	cc = malloc(sizeof(t_char));
-	cc->c = c;
+	cc = malloc(sizeof(char));
+	*cc = c;
 	ft_lstadd_back(lst, ft_lstnew(cc));
 }
 

@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 20:40:29 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 05:20:20 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:05:17 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 */
 typedef struct s_printf_flags
 {
-	bool	align_left; ///< whether to align left (`-`)
 	int		precision; ///< what precision is set (`.<width>`)
-	bool	pad_zero; ///< whether to pad with zeros (`0`)
 	int		min_width; ///< minimum width (`<width>`)
+	bool	align_left; ///< whether to align left (`-`)
+	bool	pad_zero; ///< whether to pad with zeros (`0`)
 	bool	alternate; ///< whether to use alternate version (`#`)
 	bool	space; ///< whether to leave space for sign (` `)
 	bool	sign; ///< whether to always print sign (`+`)

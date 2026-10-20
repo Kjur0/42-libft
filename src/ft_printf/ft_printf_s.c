@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 14:53:40 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 05:22:18 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:08:22 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ void	ft_printf_s(char *s, t_list **lst, t_printf_flags *f)
 			ft_printf_s("(null)", lst, f);
 		return ;
 	}
-	if (f->precision < 0)
+	if (f->precision < 0 || f->precision > len)
 		f->precision = len;
 	if (f->min_width > f->precision)
 		f->min_width -= f->precision;
 	else
 		f->min_width = 0;
-	while (!f->align_left && f->min_width--)
+	while (!f->align_left && f->min_width-- > 0)
 		ft_lst_char(lst, ' ');
 	while (*s && f->precision-- > 0)
 		ft_lst_char(lst, *s++);
-	while (f->align_left && f->min_width--)
+	while (f->align_left && f->min_width-- > 0)
 		ft_lst_char(lst, ' ');
 }

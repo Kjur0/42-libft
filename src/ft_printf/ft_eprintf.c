@@ -6,18 +6,18 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 17:25:38 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 05:22:28 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:08:45 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf.h>
 
-#include <ft_io.h>
 #include <ft_char.h>
 
 #include "ft_printf_utils.h"
 
 #include <stdarg.h>
+#include <unistd.h>
 
 /** @brief get the width for a formatter
  *
@@ -140,16 +140,21 @@ static int	ft_lst_eprint(t_list *lst)
 {
 	t_list	*next;
 	int		size;
+	char	*str;
 
+	size = ft_lstsize(lst);
+	str = malloc(size + 1);
+	str[size] = '\0';
 	size = 0;
 	while (lst)
 	{
 		next = lst->next;
-		size++;
-		ft_putchar_fd(((t_char *)(lst->content))->c, FD_STDERR);
+		str[size++] = *(char *)lst->content;
 		ft_lstdelone(lst, free);
 		lst = next;
 	}
+	size = write(2, str, size);
+	free(str);
 	return (size);
 }
 

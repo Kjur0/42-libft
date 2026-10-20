@@ -6,7 +6,7 @@
 /*   By: kjurkows <kjurkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 21:09:42 by kjurkows          #+#    #+#             */
-/*   Updated: 2026/08/23 05:20:02 by kjurkows         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:07:52 by kjurkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,14 +138,6 @@ void	ft_printf_u(unsigned int u, t_list **lst, t_printf_flags *f);
  */
 void	ft_printf_x(unsigned int x, t_list **lst, t_printf_flags *f, bool uc);
 
-/** @brief basic container for a character
- *
- * @internal
- */
-typedef struct s_char
-{
-	char	c; ///< stored character
-}	t_char;
 
 /** @brief add character to linked list
  *
